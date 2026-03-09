@@ -13,9 +13,6 @@ main:
 
   - title: "Talks"
     url: /talks/
-    
-  - title: "CV"
-    url: /cv/
 
-  - title: "Resume PDF"
+  - title: "CV"
     url: /files/Masaki_Kuribayashi_Resume.pdf
