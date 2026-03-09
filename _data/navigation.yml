@@ -12,22 +12,13 @@ main:
     url: /publications/
 
   - title: "Talks"
-    url: /talks/    
-
-  - title: "Teaching"
-    url: /teaching/    
-    
-  - title: "Portfolio"
-    url: /portfolio/
-        
-  - title: "Blog Posts"
-    url: /year-archive/
+    url: /talks/
     
   - title: "CV"
-    url: https://github.com/chestnutforestlabo/cv/blob/main/resume.pdf
+    url: /cv/
+
+  - title: "Resume PDF"
+    url: /files/Masaki_Kuribayashi_Resume.pdf
     
   # - title: "CV"
   #   url: /cv-json/
-    
-  - title: "Guide"
-    url: /markdown/

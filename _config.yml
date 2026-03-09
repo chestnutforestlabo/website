@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Masaki Kuribayashi"
 title_separator          : "-"
 name                     : &name "Masaki Kuribayashi"
-description              : &description "HCI Researcher"
+description              : &description "Ph.D. Candidate in HCI and Accessibility at Waseda University"
 url                      : https://masakikuribayashi.github.io
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -26,11 +26,11 @@ author:
   avatar           : "profile.png"
   name             : "Masaki Kuribayashi"
   pronouns         : "he/him"
-  bio              : "HCI Researcher"
+  bio              : "Ph.D. Candidate | HCI and Accessibility Researcher"
   location         : "Tokyo, Japan"
   employer         : "Waseda University"
-  uri              : "https://masakikuribayashi.github.io/"
-  email            : "chestnutforestlabo [at] gmail.com"
+  uri              : "https://www.masakikuribayashi.com/"
+  email            : "rugbykuribayashi@toki.waseda.jp"
 
   # Academic websites
   academia         : # URL
