@@ -7,6 +7,6 @@ redirect_from:
   - /about.html
 ---
 
-I am a resercher Ph.D. candidate in the Shigeo Morishima Laboratory at Waseda University (Graduate School of Advanced Science and Engineering). My research focuses on Human-Computer Interaction (HCI) and accessibility, especially assistive systems for blind and low-vision people.
+Resercher at Miraikan Accessibility Lab.
 
-My work combines multimodal AI, computer vision, robots, and smartphone-based interaction to support real-world navigation and exploration. I also work on user-centered co-design, dataset development, and assistive AI model development.
+**Reserach Interest**: Assitive Navigation for Blind People, Vision and Language Navigation
