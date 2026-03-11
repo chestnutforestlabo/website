@@ -22,6 +22,14 @@ Resercher at Miraikan Accessibility Lab.
 
 **Reserach Interest**: Assitive Navigation for Blind People, Vision and Language Navigation
 """
+JAPANESE_PUBLICATION_TOP_BLOCK = """---
+permalink: /japanese_publication/
+title: "Japanese Publications"
+author_profile: true
+---
+
+# Japanese Publications
+"""
 
 
 def parse_args() -> argparse.Namespace:
@@ -37,6 +45,11 @@ def parse_args() -> argparse.Namespace:
         "--output",
         default="_pages/about.md",
         help="Output markdown file path (default: _pages/about.md)",
+    )
+    parser.add_argument(
+        "--jp-output",
+        default="_pages/japanese_publication.md",
+        help="Output markdown file path for Japanese publications (default: _pages/japanese_publication.md)",
     )
     return parser.parse_args()
 
@@ -100,6 +113,11 @@ def clean_text(text: str) -> str:
     return text.replace("|", "\\|")
 
 
+def emphasize_author_names(text: str) -> str:
+    # Keep plain text (no bold) for a consistent visual style.
+    return text
+
+
 def format_cell(key: str, raw: str) -> str:
     value = clean_text(raw)
     if not value:
@@ -127,9 +145,17 @@ def is_publications_csv(csv_path: Path, data_dir: Path) -> bool:
     return "publications" in rel
 
 
+def get_csv_by_relative_path(data_dir: Path, csv_files: list[Path], relative_path: str) -> Path | None:
+    target = relative_path.replace("\\", "/")
+    for csv_path in csv_files:
+        if csv_path.relative_to(data_dir).as_posix() == target:
+            return csv_path
+    return None
+
+
 def render_publication_item(index: int, row: dict[str, str]) -> str:
     year = clean_text(row.get("year", ""))
-    authors = clean_text(row.get("authors", ""))
+    authors = emphasize_author_names(clean_text(row.get("authors", "")))
     title = clean_text(row.get("title", ""))
     venue = clean_text(row.get("venue", ""))
     award = clean_text(row.get("award", ""))
@@ -161,10 +187,10 @@ def render_publication_item(index: int, row: dict[str, str]) -> str:
     if links:
         sentence += " " + " ".join(links)
 
-    return f"- [{index}] {sentence}".rstrip()
+    return f"{index}. {sentence}".rstrip()
 
 
-def render_generic_item(columns: list[str], row: dict[str, str]) -> str:
+def render_generic_item(columns: list[str], row: dict[str, str], date_last: bool = False) -> str:
     lower_cols = {c.lower() for c in columns}
     date = clean_text(row.get("date", ""))
     title = clean_text(row.get("title", ""))
@@ -173,16 +199,20 @@ def render_generic_item(columns: list[str], row: dict[str, str]) -> str:
 
     if "title" in lower_cols and ("url" in lower_cols or "link" in lower_cols) and len(columns) <= 3:
         if URL_RE.match(url):
-            return f"- [{title}]({url})" if title else f"- [Link]({url})"
+            return f"[{title}]({url})" if title else f"[Link]({url})"
         if title and url:
-            return f"- {title} ({url})"
+            return f"{title} ({url})"
         if title:
-            return f"- {title}"
+            return title
 
     if date and title and venue:
-        return f"- **{date}**: {title} ({venue})"
+        if date_last:
+            return f"{title} ({venue}) - {date}"
+        return f"{date}: {title} ({venue})"
     if date and title:
-        return f"- **{date}**: {title}"
+        if date_last:
+            return f"{title} - {date}"
+        return f"{date}: {title}"
 
     chunks: list[str] = []
     for col in columns:
@@ -193,8 +223,30 @@ def render_generic_item(columns: list[str], row: dict[str, str]) -> str:
             chunks.append(format_cell(col, value))
         else:
             label = col.replace("_", " ").title()
-            chunks.append(f"**{label}:** {value}")
-    return "- " + (" | ".join(chunks) if chunks else "-")
+            chunks.append(f"{label}: {value}")
+    return " | ".join(chunks) if chunks else "-"
+
+
+def build_section_entries(csv_path: Path, data_dir: Path) -> list[str]:
+    fieldnames, rows = read_csv_rows(csv_path)
+    columns = used_columns(fieldnames, rows)
+    if not columns or not rows:
+        return ["_No data available._"]
+
+    if is_publications_csv(csv_path, data_dir):
+        return [render_publication_item(i, row) for i, row in enumerate(rows, start=1)]
+    rel = csv_path.relative_to(data_dir).as_posix()
+    date_last = rel in {
+        "awards.csv",
+        "academic_service.csv",
+        "talks.csv",
+        "fellowships.csv",
+        "articles.csv",
+    }
+    entries = [render_generic_item(columns, row, date_last=date_last) for row in rows]
+    if rel in {"awards.csv", "academic_service.csv", "articles.csv", "fellowships.csv", "talks.csv"}:
+        return [f"{i}. {entry}" for i, entry in enumerate(entries, start=1)]
+    return entries
 
 
 def build_markdown(data_dir: Path, csv_files: list[Path]) -> str:
@@ -203,31 +255,81 @@ def build_markdown(data_dir: Path, csv_files: list[Path]) -> str:
         "",
     ]
 
-    for csv_path in csv_files:
-        section = prettify_section_name(csv_path, data_dir)
-        fieldnames, rows = read_csv_rows(csv_path)
-        columns = used_columns(fieldnames, rows)
+    # 1) English publications (merge both English publication CSV files)
+    en_main = get_csv_by_relative_path(data_dir, csv_files, "en/publications.csv")
+    en_short = get_csv_by_relative_path(data_dir, csv_files, "en/publications_short.csv")
+    lines.append("## English Publications")
+    lines.append("")
+    pub_index = 1
 
-        lines.append(f"## {section}")
-        lines.append("")
-
-        if not columns:
-            lines.append("_No data available._")
-            lines.append("")
-            continue
-
+    lines.append("### Full Papers")
+    lines.append("")
+    if en_main is None:
+        lines.append("_No data available._<br>")
+    else:
+        _, rows = read_csv_rows(en_main)
         if not rows:
-            lines.append("_No data available._")
-            lines.append("")
-            continue
+            lines.append("_No data available._<br>")
+        for row in rows:
+            lines.append(f"{render_publication_item(pub_index, row)}<br>")
+            pub_index += 1
 
-        if is_publications_csv(csv_path, data_dir):
-            for i, row in enumerate(rows, start=1):
-                lines.append(render_publication_item(i, row))
-        else:
-            for row in rows:
-                lines.append(render_generic_item(columns, row))
+    lines.append("")
+    lines.append("### Short Papers")
+    lines.append("")
+    if en_short is None:
+        lines.append("_No data available._<br>")
+    else:
+        _, rows = read_csv_rows(en_short)
+        if not rows:
+            lines.append("_No data available._<br>")
+        for row in rows:
+            lines.append(f"{render_publication_item(pub_index, row)}<br>")
+            pub_index += 1
+    lines.append("")
+    lines.append("Japanese publications are available [here](/japanese_publication/).<br>")
+    lines.append("")
+
+    # 2) Remaining sections in requested order
+    ordered_sections = [
+        ("awards.csv", "Awards"),
+        ("academic_service.csv", "Academic Service"),
+        ("fellowships.csv", "Fellowships"),
+        ("talks.csv", "Talks"),
+        ("articles.csv", "Articles"),
+    ]
+    for rel_path, title in ordered_sections:
+        csv_path = get_csv_by_relative_path(data_dir, csv_files, rel_path)
+        if csv_path is None:
+            continue
+        lines.append(f"## {title}")
         lines.append("")
+        entries = build_section_entries(csv_path, data_dir)
+        for entry in entries:
+            lines.append(f"{entry}<br>")
+        lines.append("")
+
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def build_japanese_publications_markdown(data_dir: Path, csv_files: list[Path]) -> str:
+    jp_csv = get_csv_by_relative_path(data_dir, csv_files, "jp/publications.csv")
+    lines: list[str] = [
+        JAPANESE_PUBLICATION_TOP_BLOCK.rstrip(),
+        "",
+    ]
+
+    if jp_csv is None:
+        lines.append("_No data available._")
+        lines.append("")
+        return "\n".join(lines).rstrip() + "\n"
+
+    entries = build_section_entries(jp_csv, data_dir)
+    for entry in entries:
+        lines.append(f"{entry}<br>")
+    lines.append("")
+    lines.append("[Back to About](/)<br>")
+    lines.append("")
 
     return "\n".join(lines).rstrip() + "\n"
 
@@ -236,6 +338,7 @@ def main() -> int:
     args = parse_args()
     data_dir = Path(args.data_dir).resolve()
     output_path = Path(args.output).resolve()
+    jp_output_path = Path(args.jp_output).resolve()
 
     if not data_dir.exists() or not data_dir.is_dir():
         raise SystemExit(f"Data directory not found: {data_dir}")
@@ -244,10 +347,15 @@ def main() -> int:
     if not csv_files:
         raise SystemExit(f"No CSV files found under: {data_dir}")
 
-    markdown = build_markdown(data_dir, csv_files)
-    output_path.write_text(markdown, encoding="utf-8")
+    about_markdown = build_markdown(data_dir, csv_files)
+    output_path.write_text(about_markdown, encoding="utf-8")
 
-    print(f"Generated {output_path} from {len(csv_files)} CSV files.")
+    jp_markdown = build_japanese_publications_markdown(data_dir, csv_files)
+    jp_output_path.write_text(jp_markdown, encoding="utf-8")
+
+    print(
+        f"Generated {output_path} and {jp_output_path} from {len(csv_files)} CSV files."
+    )
     return 0
 
 
