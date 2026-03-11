@@ -7,7 +7,6 @@ import argparse
 import csv
 from pathlib import Path
 import re
-from typing import Iterable
 
 URL_RE = re.compile(r"^https?://", re.IGNORECASE)
 ABOUT_TOP_BLOCK = """---
@@ -123,15 +122,79 @@ def format_cell(key: str, raw: str) -> str:
     return value
 
 
-def markdown_table(columns: list[str], rows: list[dict[str, str]]) -> Iterable[str]:
-    header = "| " + " | ".join(col.replace("_", " ").title() for col in columns) + " |"
-    separator = "| " + " | ".join("---" for _ in columns) + " |"
-    yield header
-    yield separator
+def is_publications_csv(csv_path: Path, data_dir: Path) -> bool:
+    rel = csv_path.relative_to(data_dir).as_posix().lower()
+    return "publications" in rel
 
-    for row in rows:
-        cells = [format_cell(col, row.get(col, "")) for col in columns]
-        yield "| " + " | ".join(cells) + " |"
+
+def render_publication_item(index: int, row: dict[str, str]) -> str:
+    year = clean_text(row.get("year", ""))
+    authors = clean_text(row.get("authors", ""))
+    title = clean_text(row.get("title", ""))
+    venue = clean_text(row.get("venue", ""))
+    award = clean_text(row.get("award", ""))
+
+    parts: list[str] = []
+    if authors:
+        parts.append(authors)
+    if title:
+        parts.append(f"\"{title}\"")
+    if venue:
+        parts.append(venue)
+    if year:
+        parts.append(f"({year})")
+    if award:
+        parts.append(f"Award: {award}")
+
+    links: list[str] = []
+    for key in ("doi", "paper_url", "url", "slides"):
+        value = clean_text(row.get(key, ""))
+        if not value:
+            continue
+        formatted = format_cell(key, value)
+        if formatted != "-":
+            links.append(formatted)
+
+    sentence = ". ".join(parts).strip()
+    if sentence and not sentence.endswith("."):
+        sentence += "."
+    if links:
+        sentence += " " + " ".join(links)
+
+    return f"- [{index}] {sentence}".rstrip()
+
+
+def render_generic_item(columns: list[str], row: dict[str, str]) -> str:
+    lower_cols = {c.lower() for c in columns}
+    date = clean_text(row.get("date", ""))
+    title = clean_text(row.get("title", ""))
+    venue = clean_text(row.get("venue", ""))
+    url = clean_text(row.get("url", "")) or clean_text(row.get("link", ""))
+
+    if "title" in lower_cols and ("url" in lower_cols or "link" in lower_cols) and len(columns) <= 3:
+        if URL_RE.match(url):
+            return f"- [{title}]({url})" if title else f"- [Link]({url})"
+        if title and url:
+            return f"- {title} ({url})"
+        if title:
+            return f"- {title}"
+
+    if date and title and venue:
+        return f"- **{date}**: {title} ({venue})"
+    if date and title:
+        return f"- **{date}**: {title}"
+
+    chunks: list[str] = []
+    for col in columns:
+        value = clean_text(row.get(col, ""))
+        if not value:
+            continue
+        if col.lower() in {"url", "link", "paper_url", "slides", "doi"}:
+            chunks.append(format_cell(col, value))
+        else:
+            label = col.replace("_", " ").title()
+            chunks.append(f"**{label}:** {value}")
+    return "- " + (" | ".join(chunks) if chunks else "-")
 
 
 def build_markdown(data_dir: Path, csv_files: list[Path]) -> str:
@@ -158,7 +221,12 @@ def build_markdown(data_dir: Path, csv_files: list[Path]) -> str:
             lines.append("")
             continue
 
-        lines.extend(markdown_table(columns, rows))
+        if is_publications_csv(csv_path, data_dir):
+            for i, row in enumerate(rows, start=1):
+                lines.append(render_publication_item(i, row))
+        else:
+            for row in rows:
+                lines.append(render_generic_item(columns, row))
         lines.append("")
 
     return "\n".join(lines).rstrip() + "\n"
