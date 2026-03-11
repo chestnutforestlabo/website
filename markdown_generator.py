@@ -5,10 +5,12 @@ from __future__ import annotations
 
 import argparse
 import csv
+import html
 from pathlib import Path
 import re
 
 URL_RE = re.compile(r"^https?://", re.IGNORECASE)
+DEFAULT_PROJECT_IMAGE = "/images/comingsoon.jpg"
 ABOUT_TOP_BLOCK = """---
 permalink: /
 title: "Masaki Kuribayashi"
@@ -88,6 +90,26 @@ def read_csv_rows(csv_path: Path) -> tuple[list[str], list[dict[str, str]]]:
         return fieldnames, rows
 
 
+def parse_year_for_sorting(raw: str) -> int:
+    value = clean_plain_text(raw)
+    try:
+        return int(value)
+    except ValueError:
+        return -1
+
+
+def sort_rows_newest_first(rows: list[dict[str, str]]) -> list[dict[str, str]]:
+    return sorted(rows, key=lambda row: parse_year_for_sorting(row.get("year", "")), reverse=True)
+
+
+def sort_rows_oldest_first(rows: list[dict[str, str]]) -> list[dict[str, str]]:
+    return sorted(rows, key=lambda row: parse_year_for_sorting(row.get("year", "")))
+
+
+def is_truthy(value: str) -> bool:
+    return clean_plain_text(value).lower() in {"true", "1", "yes", "y"}
+
+
 def normalize_row(row: dict[str, str]) -> dict[str, str]:
     # Some records put plain location text in `url` because the source has an
     # extra comma in the venue field. Merge it back for cleaner output.
@@ -117,6 +139,10 @@ def clean_text(text: str) -> str:
     # Prevent markdown from treating CSV asterisks as emphasis.
     text = text.replace("*", "\\*")
     return text
+
+
+def clean_plain_text(text: str) -> str:
+    return re.sub(r"\s+", " ", text.strip())
 
 
 def emphasize_author_names(text: str) -> str:
@@ -197,6 +223,42 @@ def render_publication_item(index: int, row: dict[str, str]) -> str:
     return f"{index}. {sentence}".rstrip()
 
 
+def resolve_project_image_path(raw: str) -> str:
+    value = clean_plain_text(raw)
+    if not value:
+        return DEFAULT_PROJECT_IMAGE
+    if URL_RE.match(value) or value.startswith("/"):
+        return value
+
+    normalized = value.lstrip("./")
+    if normalized.startswith("images/"):
+        return f"/{normalized}"
+    return f"/images/{normalized}"
+
+
+def render_project_item(row: dict[str, str]) -> str:
+    title = clean_plain_text(row.get("title", ""))
+    venue = clean_plain_text(row.get("venue", ""))
+    image_path = resolve_project_image_path(row.get("image", ""))
+
+    title_html = html.escape(title or "Untitled Project")
+    venue_html = html.escape(venue)
+    image_html = html.escape(image_path, quote=True)
+    alt_html = html.escape(title or "Project image", quote=True)
+
+    return "\n".join(
+        [
+            '<div class="project-item">',
+            f'  <div class="project-item__media"><img src="{image_html}" alt="{alt_html}" loading="lazy"></div>',
+            '  <div class="project-item__body">',
+            f'    <div class="project-item__title">{title_html}</div>',
+            f'    <div class="project-item__venue">{venue_html}</div>',
+            "  </div>",
+            "</div>",
+        ]
+    )
+
+
 def render_generic_item(
     columns: list[str], row: dict[str, str], date_last: bool = False, bold_title: bool = False
 ) -> str:
@@ -247,7 +309,8 @@ def build_section_entries(csv_path: Path, data_dir: Path) -> list[str]:
         return ["_No data available._"]
 
     if is_publications_csv(csv_path, data_dir):
-        return [render_publication_item(i, row) for i, row in enumerate(rows, start=1)]
+        sorted_rows = sort_rows_oldest_first(rows)
+        return [render_publication_item(i, row) for i, row in enumerate(sorted_rows, start=1)]
     rel = csv_path.relative_to(data_dir).as_posix()
     date_last = rel in {
         "awards.csv",
@@ -270,39 +333,63 @@ def build_markdown(data_dir: Path, csv_files: list[Path]) -> str:
     lines: list[str] = [
         ABOUT_TOP_BLOCK.rstrip(),
         "",
-        LONG_FORM_OPEN,
-        "",
     ]
 
     # 1) English publications (merge both English publication CSV files)
     en_main = get_csv_by_relative_path(data_dir, csv_files, "en/publications.csv")
     en_short = get_csv_by_relative_path(data_dir, csv_files, "en/publications_short.csv")
-    lines.append("# English Publications")
+    full_rows_newest: list[dict[str, str]] = []
+    short_rows_newest: list[dict[str, str]] = []
+    project_rows: list[dict[str, str]] = []
+    if en_main is not None:
+        _, rows = read_csv_rows(en_main)
+        full_rows_newest = sort_rows_newest_first(rows)
+        project_rows.extend(full_rows_newest)
+    if en_short is not None:
+        _, rows = read_csv_rows(en_short)
+        short_rows_newest = sort_rows_newest_first(rows)
+        project_rows.extend([row for row in short_rows_newest if is_truthy(row.get("include", ""))])
+
+    full_rows_oldest = sort_rows_oldest_first(full_rows_newest)
+    short_rows_oldest = sort_rows_oldest_first(short_rows_newest)
+
+    lines.append("## Projects")
+    lines.append("")
+    if project_rows:
+        lines.append('<div class="project-list">')
+        for row in project_rows:
+            lines.append(render_project_item(row))
+        lines.append("</div>")
+    else:
+        lines.append("_No data available._")
+    lines.append("")
+
+    lines.append(LONG_FORM_OPEN)
+    lines.append("")
+    lines.append("## English Publications")
     lines.append("")
     pub_index = 1
 
-    lines.append("## Full Papers")
+    lines.append("### Full Papers")
     lines.append("")
     if en_main is None:
         lines.append("_No data available._<br>")
     else:
-        _, rows = read_csv_rows(en_main)
-        if not rows:
+        if not full_rows_oldest:
             lines.append("_No data available._<br>")
-        for row in rows:
+        for row in full_rows_oldest:
             lines.append(f"{render_publication_item(pub_index, row)}<br>")
             pub_index += 1
 
     lines.append("")
-    lines.append("#### Short Papers")
+    lines.append("### Short Papers")
     lines.append("")
     if en_short is None:
         lines.append("_No data available._<br>")
     else:
-        _, rows = read_csv_rows(en_short)
-        if not rows:
+        if not short_rows_oldest:
             lines.append("_No data available._<br>")
-        for row in rows:
+        for row in short_rows_oldest:
             lines.append(f"{render_publication_item(pub_index, row)}<br>")
             pub_index += 1
     lines.append("")
@@ -321,7 +408,7 @@ def build_markdown(data_dir: Path, csv_files: list[Path]) -> str:
         csv_path = get_csv_by_relative_path(data_dir, csv_files, rel_path)
         if csv_path is None:
             continue
-        lines.append(f"### {title}")
+        lines.append(f"## {title}")
         lines.append("")
         entries = build_section_entries(csv_path, data_dir)
         for entry in entries:
