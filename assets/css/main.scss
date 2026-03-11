@@ -41,3 +41,17 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+
+/* Slightly increase right-side whitespace on desktop-sized layouts. */
+.page {
+  @include breakpoint($large) {
+    @include suffix(0 of 12);
+  }
+}
+
+/* Slightly tighten generated long-form sections (publications, talks, etc.). */
+.page__content .long-form-content p,
+.page__content .long-form-content li {
+  font-size: 0.80em;
+  line-height: 1.25;
+}

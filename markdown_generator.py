@@ -28,8 +28,11 @@ title: "Japanese Publications"
 author_profile: true
 ---
 
-# Japanese Publications
+## Japanese Publications
 """
+
+LONG_FORM_OPEN = '<div class="long-form-content" markdown="1">'
+LONG_FORM_CLOSE = "</div>"
 
 
 def parse_args() -> argparse.Namespace:
@@ -110,12 +113,15 @@ def used_columns(fieldnames: list[str], rows: list[dict[str, str]]) -> list[str]
 
 def clean_text(text: str) -> str:
     text = re.sub(r"\s+", " ", text.strip())
-    return text.replace("|", "\\|")
+    text = text.replace("|", "\\|")
+    # Prevent markdown from treating CSV asterisks as emphasis.
+    text = text.replace("*", "\\*")
+    return text
 
 
 def emphasize_author_names(text: str) -> str:
-    text = re.sub(r"Masaki Kuribayashi(\*)?", r"**Masaki Kuribayashi**\1", text)
-    text = re.sub(r"栗林雅希(\*)?", r"**栗林雅希**\1", text)
+    text = re.sub(r"Masaki Kuribayashi(\\\*)?", r"**Masaki Kuribayashi**\1", text)
+    text = re.sub(r"栗林雅希(\\\*)?", r"**栗林雅希**\1", text)
     return text
 
 
@@ -264,16 +270,18 @@ def build_markdown(data_dir: Path, csv_files: list[Path]) -> str:
     lines: list[str] = [
         ABOUT_TOP_BLOCK.rstrip(),
         "",
+        LONG_FORM_OPEN,
+        "",
     ]
 
     # 1) English publications (merge both English publication CSV files)
     en_main = get_csv_by_relative_path(data_dir, csv_files, "en/publications.csv")
     en_short = get_csv_by_relative_path(data_dir, csv_files, "en/publications_short.csv")
-    lines.append("## English Publications")
+    lines.append("# English Publications")
     lines.append("")
     pub_index = 1
 
-    lines.append("### Full Papers")
+    lines.append("## Full Papers")
     lines.append("")
     if en_main is None:
         lines.append("_No data available._<br>")
@@ -286,7 +294,7 @@ def build_markdown(data_dir: Path, csv_files: list[Path]) -> str:
             pub_index += 1
 
     lines.append("")
-    lines.append("### Short Papers")
+    lines.append("#### Short Papers")
     lines.append("")
     if en_short is None:
         lines.append("_No data available._<br>")
@@ -313,12 +321,15 @@ def build_markdown(data_dir: Path, csv_files: list[Path]) -> str:
         csv_path = get_csv_by_relative_path(data_dir, csv_files, rel_path)
         if csv_path is None:
             continue
-        lines.append(f"## {title}")
+        lines.append(f"### {title}")
         lines.append("")
         entries = build_section_entries(csv_path, data_dir)
         for entry in entries:
             lines.append(f"{entry}<br>")
         lines.append("")
+
+    lines.append(LONG_FORM_CLOSE)
+    lines.append("")
 
     return "\n".join(lines).rstrip() + "\n"
 
@@ -328,10 +339,14 @@ def build_japanese_publications_markdown(data_dir: Path, csv_files: list[Path]) 
     lines: list[str] = [
         JAPANESE_PUBLICATION_TOP_BLOCK.rstrip(),
         "",
+        LONG_FORM_OPEN,
+        "",
     ]
 
     if jp_csv is None:
         lines.append("_No data available._")
+        lines.append("")
+        lines.append(LONG_FORM_CLOSE)
         lines.append("")
         return "\n".join(lines).rstrip() + "\n"
 
@@ -340,6 +355,8 @@ def build_japanese_publications_markdown(data_dir: Path, csv_files: list[Path]) 
         lines.append(f"{entry}<br>")
     lines.append("")
     lines.append("[Back to About](/)<br>")
+    lines.append("")
+    lines.append(LONG_FORM_CLOSE)
     lines.append("")
 
     return "\n".join(lines).rstrip() + "\n"
