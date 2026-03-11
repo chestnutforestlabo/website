@@ -52,7 +52,7 @@
 /* Slightly tighten generated long-form sections (publications, talks, etc.). */
 .page__content .long-form-content p,
 .page__content .long-form-content li {
-  font-size: 0.80em;
+  font-size: 0.75em;
   line-height: 1.25;
 }
 
@@ -83,20 +83,20 @@
 }
 
 .page__content .long-form-content .project-item__title {
-  font-size: 0.94em;
+  font-size: 0.86em;
   font-weight: 600;
   line-height: 1.35;
   margin-bottom: 0.35rem;
 }
 
 .page__content .long-form-content .project-item__venue {
-  font-size: 0.9em;
+  font-size: 0.82em;
   line-height: 1.4;
 }
 
 .page__content .long-form-content .project-item__authors {
   margin-top: 0.3rem;
-  font-size: 0.9em;
+  font-size: 0.82em;
   line-height: 1.45;
 }
 
@@ -108,7 +108,7 @@
   margin-top: 0.25rem;
   color: #b00020;
   font-weight: 700;
-  font-size: 0.9em;
+  font-size: 0.82em;
   line-height: 1.35;
 }
 

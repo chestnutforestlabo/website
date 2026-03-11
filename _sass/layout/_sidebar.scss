@@ -255,7 +255,7 @@
   border: 1px solid var(--global-border-color);
   border-radius: $border-radius;
   background: var(--global-bg-color);
-  z-index: -1;
+  z-index: 20;
   box-shadow: 0 0 10px rgba(#000, 0.25);
   cursor: default;
 
@@ -321,4 +321,8 @@
       text-decoration: underline;
     }
   }
+}
+
+.author__urls-wrapper button.open + .author__urls {
+  z-index: 30;
 }

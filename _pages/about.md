@@ -21,6 +21,8 @@ Resercher at Miraikan Accessibility Lab.
 
 ## Projects
 
+*\* indicates equal contribution.*
+
 <div class="project-list">
 <div class="project-item">
   <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="Time-Aware Assistive Navigation" loading="lazy"></div>
@@ -72,7 +74,7 @@ Resercher at Miraikan Accessibility Lab.
   <div class="project-item__body">
     <div class="project-item__title">Memory-Maze: Scenario Driven Visual Language Navigation Benchmark for Guiding Blind People.</div>
     <div class="project-item__venue">RA-L 2025</div>
-    <div class="project-item__authors"><strong class="project-item__self">Masaki Kuribayashi*</strong>, Kohei Uehara*, Allan Wang, Daisuke Sato, Renato Ribeiro, Simon Chu, and Shigeo Morishima (* - equal contribution)</div>
+    <div class="project-item__authors"><strong class="project-item__self">Masaki Kuribayashi*</strong>, Kohei Uehara*, Allan Wang, Daisuke Sato, Renato Ribeiro, Simon Chu, and Shigeo Morishima</div>
   </div>
 </div>
 <div class="project-item">
@@ -80,7 +82,7 @@ Resercher at Miraikan Accessibility Lab.
   <div class="project-item__body">
     <div class="project-item__title">ChitChatGuide: Conversational Interaction Using Large Language Models for Assisting People with Visual Impairments to Explore a Shopping Mall.</div>
     <div class="project-item__venue">MobileHCI 2024</div>
-    <div class="project-item__authors">Yuka Kaniwa*, <strong class="project-item__self">Masaki Kuribayashi*</strong>, Seita Kayukawa, Daisuke Sato, Hironobu Takagi, Chieko Asakawa, Shigeo Morishima (* - equal contribution)</div>
+    <div class="project-item__authors">Yuka Kaniwa*, <strong class="project-item__self">Masaki Kuribayashi*</strong>, Seita Kayukawa, Daisuke Sato, Hironobu Takagi, Chieko Asakawa, Shigeo Morishima</div>
   </div>
 </div>
 <div class="project-item">
@@ -88,7 +90,7 @@ Resercher at Miraikan Accessibility Lab.
   <div class="project-item__body">
     <div class="project-item__title">Snap&amp;Nav: Smartphone-based Indoor Navigation System For Blind People via Floor Map Analysis and Intersection Detection.</div>
     <div class="project-item__venue">MobileHCI 2024</div>
-    <div class="project-item__authors">Masaya Kubota*, <strong class="project-item__self">Masaki Kuribayashi*</strong>, Seita Kayukawa, Hironobu Takagi, Chieko Asakawa, Shigeo Morishima (* - equal contribution)</div>
+    <div class="project-item__authors">Masaya Kubota*, <strong class="project-item__self">Masaki Kuribayashi*</strong>, Seita Kayukawa, Hironobu Takagi, Chieko Asakawa, Shigeo Morishima</div>
   </div>
 </div>
 <div class="project-item">
@@ -128,7 +130,7 @@ Resercher at Miraikan Accessibility Lab.
   <div class="project-item__body">
     <div class="project-item__title">LineChaser: A Smartphone-Based Navigation System for Blind People to Stand in Line.</div>
     <div class="project-item__venue">CHI 2021</div>
-    <div class="project-item__authors"><strong class="project-item__self">Masaki Kuribayashi*</strong>, Seita Kayukawa*, Hironobu Takagi, Chieko Asakawa, and Shigeo Morishima (* - equal contribution)</div>
+    <div class="project-item__authors"><strong class="project-item__self">Masaki Kuribayashi*</strong>, Seita Kayukawa*, Hironobu Takagi, Chieko Asakawa, and Shigeo Morishima</div>
     <div class="project-item__award">Award: Azusa Ono Memorial Award</div>
   </div>
 </div>

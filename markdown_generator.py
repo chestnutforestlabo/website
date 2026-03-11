@@ -37,12 +37,11 @@ permalink: /publication/
 title: "Publications"
 author_profile: true
 ---
-
-## Publications
 """
 
 LONG_FORM_OPEN = '<div class="long-form-content" markdown="1">'
 LONG_FORM_CLOSE = "</div>"
+EQUAL_CONTRIBUTION_NOTE = "*\\* indicates equal contribution.*"
 
 
 def parse_args() -> argparse.Namespace:
@@ -158,6 +157,17 @@ def clean_plain_text(text: str) -> str:
     return re.sub(r"\s+", " ", text.strip())
 
 
+def strip_equal_contribution_note(text: str) -> str:
+    cleaned = clean_plain_text(text)
+    cleaned = re.sub(
+        r"\s*\(\s*\*\s*-\s*equal contribution\s*\)\s*$",
+        "",
+        cleaned,
+        flags=re.IGNORECASE,
+    )
+    return cleaned.strip()
+
+
 def emphasize_author_names(text: str) -> str:
     text = re.sub(r"Masaki Kuribayashi(\\\*)?", r"**Masaki Kuribayashi**\1", text)
     text = re.sub(r"栗林雅希(\\\*)?", r"**栗林雅希**\1", text)
@@ -201,7 +211,8 @@ def get_csv_by_relative_path(data_dir: Path, csv_files: list[Path], relative_pat
 
 def render_publication_item(index: int, row: dict[str, str]) -> str:
     year = clean_text(row.get("year", ""))
-    authors = emphasize_author_names(clean_text(row.get("authors", "")))
+    authors_raw = strip_equal_contribution_note(row.get("authors", ""))
+    authors = emphasize_author_names(clean_text(authors_raw))
     title = clean_text(row.get("title", ""))
     venue = clean_text(row.get("venue", ""))
     award = clean_text(row.get("award", ""))
@@ -251,7 +262,7 @@ def resolve_project_image_path(raw: str) -> str:
 
 def render_project_item(row: dict[str, str]) -> str:
     title = clean_plain_text(row.get("title", ""))
-    authors = clean_plain_text(row.get("authors", ""))
+    authors = strip_equal_contribution_note(row.get("authors", ""))
     venue = clean_plain_text(row.get("venue", ""))
     award = clean_plain_text(row.get("award", ""))
     image_path = resolve_project_image_path(row.get("image", ""))
@@ -421,6 +432,8 @@ def build_markdown(data_dir: Path, csv_files: list[Path]) -> str:
 
     lines.append("## Projects")
     lines.append("")
+    lines.append(EQUAL_CONTRIBUTION_NOTE)
+    lines.append("")
     if project_rows:
         lines.append('<div class="project-list">')
         for row in project_rows:
@@ -478,6 +491,8 @@ def build_publication_markdown(data_dir: Path, csv_files: list[Path]) -> str:
         PUBLICATION_TOP_BLOCK.rstrip(),
         "",
         LONG_FORM_OPEN,
+        "",
+        EQUAL_CONTRIBUTION_NOTE,
         "",
         "### English Publications",
         "",
