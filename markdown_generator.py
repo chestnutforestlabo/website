@@ -10,6 +10,7 @@ from pathlib import Path
 import re
 
 URL_RE = re.compile(r"^https?://", re.IGNORECASE)
+DOI_ID_RE = re.compile(r"^10\.\d{4,9}/\S+$", re.IGNORECASE)
 DEFAULT_PROJECT_IMAGE = "/images/comingsoon.jpg"
 ABOUT_TOP_BLOCK = """---
 permalink: /
@@ -181,7 +182,9 @@ def format_cell(key: str, raw: str) -> str:
 
     key_lower = key.lower()
     if key_lower == "doi":
-        doi_url = value if URL_RE.match(value) else f"https://doi.org/{value}"
+        doi_url = resolve_doi_url(value)
+        if not doi_url:
+            return "-"
         return f"[DOI]({doi_url})"
 
     if key_lower in {"url", "link", "paper_url", "slides"}:
@@ -257,12 +260,24 @@ def resolve_project_image_path(raw: str) -> str:
     return f"/images/{normalized}"
 
 
+def resolve_doi_url(raw: str) -> str:
+    value = clean_plain_text(raw)
+    if not value:
+        return ""
+    if URL_RE.match(value):
+        return value
+    if DOI_ID_RE.match(value):
+        return f"https://doi.org/{value}"
+    return ""
+
+
 def render_project_item(row: dict[str, str]) -> str:
     title = clean_plain_text(row.get("title", ""))
     authors = strip_equal_contribution_note(row.get("authors", ""))
     venue = clean_plain_text(row.get("venue", ""))
     award = clean_plain_text(row.get("award", ""))
     image_path = resolve_project_image_path(row.get("image", ""))
+    doi_url = resolve_doi_url(row.get("doi", ""))
 
     title_html = html.escape(title or "Untitled Project")
     authors_html = html.escape(authors)
@@ -280,6 +295,11 @@ def render_project_item(row: dict[str, str]) -> str:
     award_html = html.escape(award)
     image_html = html.escape(image_path, quote=True)
     alt_html = html.escape(title or "Project image", quote=True)
+    if doi_url:
+        doi_html = html.escape(doi_url, quote=True)
+        title_html = (
+            f'<a href="{doi_html}" target="_blank" rel="noopener noreferrer">{title_html}</a>'
+        )
 
     body_lines = [
         f'    <div class="project-item__title">{title_html}</div>',
@@ -382,7 +402,7 @@ def build_section_entries(csv_path: Path, data_dir: Path) -> list[str]:
         return ["_No data available._"]
 
     if is_publications_csv(csv_path, data_dir):
-        sorted_rows = sort_rows_oldest_first(rows)
+        sorted_rows = sort_rows_newest_first(rows)
         return [render_publication_item(i, row) for i, row in enumerate(sorted_rows, start=1)]
     rel = csv_path.relative_to(data_dir).as_posix()
     date_last = rel in {
@@ -446,20 +466,14 @@ def build_markdown(data_dir: Path, csv_files: list[Path]) -> str:
     # 2) Projects (derived from full papers + opted-in short papers)
     en_main = get_csv_by_relative_path(data_dir, csv_files, "en/publications.csv")
     en_short = get_csv_by_relative_path(data_dir, csv_files, "en/publications_short.csv")
-    full_rows_newest: list[dict[str, str]] = []
-    short_rows_newest: list[dict[str, str]] = []
     project_rows: list[dict[str, str]] = []
     if en_main is not None:
         _, rows = read_csv_rows(en_main)
-        full_rows_newest = sort_rows_newest_first(rows)
-        project_rows.extend(full_rows_newest)
+        project_rows.extend(sort_rows_newest_first(rows))
     if en_short is not None:
         _, rows = read_csv_rows(en_short)
-        short_rows_newest = sort_rows_newest_first(rows)
-        project_rows.extend([row for row in short_rows_newest if is_truthy(row.get("include", ""))])
-
-    full_rows_oldest = sort_rows_oldest_first(full_rows_newest)
-    short_rows_oldest = sort_rows_oldest_first(short_rows_newest)
+        short_rows = [row for row in sort_rows_newest_first(rows) if is_truthy(row.get("include", ""))]
+        project_rows.extend(short_rows)
 
     lines.append("## Projects")
     lines.append("")
@@ -504,19 +518,19 @@ def build_publication_markdown(data_dir: Path, csv_files: list[Path]) -> str:
     en_short = get_csv_by_relative_path(data_dir, csv_files, "en/publications_short.csv")
     jp_csv = get_csv_by_relative_path(data_dir, csv_files, "jp/publications.csv")
 
-    full_rows_oldest: list[dict[str, str]] = []
-    short_rows_oldest: list[dict[str, str]] = []
-    jp_rows_oldest: list[dict[str, str]] = []
+    full_rows: list[dict[str, str]] = []
+    short_rows: list[dict[str, str]] = []
+    jp_rows: list[dict[str, str]] = []
 
     if en_main is not None:
         _, rows = read_csv_rows(en_main)
-        full_rows_oldest = sort_rows_oldest_first(rows)
+        full_rows = sort_rows_newest_first(rows)
     if en_short is not None:
         _, rows = read_csv_rows(en_short)
-        short_rows_oldest = sort_rows_oldest_first(rows)
+        short_rows = sort_rows_newest_first(rows)
     if jp_csv is not None:
         _, rows = read_csv_rows(jp_csv)
-        jp_rows_oldest = sort_rows_oldest_first(rows)
+        jp_rows = sort_rows_newest_first(rows)
 
     lines: list[str] = [
         PUBLICATION_TOP_BLOCK.rstrip(),
@@ -537,30 +551,30 @@ def build_publication_markdown(data_dir: Path, csv_files: list[Path]) -> str:
     )
 
     pub_index = 1
-    if not full_rows_oldest:
+    if not full_rows:
         lines.append("_No data available._<br>")
     else:
-        for row in full_rows_oldest:
+        for row in full_rows:
             lines.append(f"{render_publication_item(pub_index, row)}<br>")
             pub_index += 1
 
     lines.append("")
     lines.append("#### Short Papers")
     lines.append("")
-    if not short_rows_oldest:
+    if not short_rows:
         lines.append("_No data available._<br>")
     else:
-        for row in short_rows_oldest:
+        for row in short_rows:
             lines.append(f"{render_publication_item(pub_index, row)}<br>")
             pub_index += 1
 
     lines.append("")
     lines.append("### Japanese Publications")
     lines.append("")
-    if not jp_rows_oldest:
+    if not jp_rows:
         lines.append("_No data available._<br>")
     else:
-        for i, row in enumerate(jp_rows_oldest, start=1):
+        for i, row in enumerate(jp_rows, start=1):
             lines.append(f"{render_publication_item(i, row)}<br>")
 
     lines.append("")

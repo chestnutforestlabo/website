@@ -59,9 +59,17 @@ Resercher at Miraikan Accessibility Lab.
   </div>
 </div>
 <div class="project-item">
+  <div class="project-item__media"><img src="/images/coming_soon.jpg" alt="Map-less Navigation for Blind People" loading="lazy"></div>
+  <div class="project-item__body">
+    <div class="project-item__title">Map-less Navigation for Blind People</div>
+    <div class="project-item__venue">PhD Thesis</div>
+    <div class="project-item__authors"><strong class="project-item__self">Masaki Kuribayashi</strong></div>
+  </div>
+</div>
+<div class="project-item">
   <div class="project-item__media"><img src="/images/papers/slopenav.png" alt="SlopeNav: A Realtime Wearable Blind Ski Assistance System with Adaptive Path Planning for Simulated Environments" loading="lazy"></div>
   <div class="project-item__body">
-    <div class="project-item__title">SlopeNav: A Realtime Wearable Blind Ski Assistance System with Adaptive Path Planning for Simulated Environments</div>
+    <div class="project-item__title"><a href="https://doi.org/10.1145/3745900.3746082" target="_blank" rel="noopener noreferrer">SlopeNav: A Realtime Wearable Blind Ski Assistance System with Adaptive Path Planning for Simulated Environments</a></div>
     <div class="project-item__venue">AHs 2025</div>
     <div class="project-item__authors">Toshihiro Hirano, Yichen Peng, <strong class="project-item__self">Masaki Kuribayashi</strong>, Erwin Wu, Shigeo Morishima, and Hideki Koike</div>
   </div>
@@ -69,7 +77,7 @@ Resercher at Miraikan Accessibility Lab.
 <div class="project-item">
   <div class="project-item__media"><img src="/images/papers/wanderguide.png" alt="WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People" loading="lazy"></div>
   <div class="project-item__body">
-    <div class="project-item__title">WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People</div>
+    <div class="project-item__title"><a href="https://doi.org/10.1145/3706598.3713788" target="_blank" rel="noopener noreferrer">WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People</a></div>
     <div class="project-item__venue">CHI 2025</div>
     <div class="project-item__authors"><strong class="project-item__self">Masaki Kuribayashi</strong>, Kohei Uehara, Allan Wang, Shigeo Morishima, and Chieko Asakawa</div>
     <div class="project-item__award">Award: Azusa Ono Memorial Award</div>
@@ -78,7 +86,7 @@ Resercher at Miraikan Accessibility Lab.
 <div class="project-item">
   <div class="project-item__media"><img src="/images/papers/miura_chi_2025.png" alt="Understanding and Supporting Formal Email Exchange by Answering AI-Generated Questions" loading="lazy"></div>
   <div class="project-item__body">
-    <div class="project-item__title">Understanding and Supporting Formal Email Exchange by Answering AI-Generated Questions</div>
+    <div class="project-item__title"><a href="https://doi.org/10.1145/3706598.3714016" target="_blank" rel="noopener noreferrer">Understanding and Supporting Formal Email Exchange by Answering AI-Generated Questions</a></div>
     <div class="project-item__venue">CHI 2025</div>
     <div class="project-item__authors">Yusuke Miura, Chi-Lan Yang, <strong class="project-item__self">Masaki Kuribayashi</strong>, Keigo Matsumoto, Hideki Kuzuoka, and Shigeo Morishima</div>
     <div class="project-item__award">Award: CHI 2026 Honorable Mention, Azusa Ono Memorial Award</div>
@@ -87,7 +95,7 @@ Resercher at Miraikan Accessibility Lab.
 <div class="project-item">
   <div class="project-item__media"><img src="/images/papers/memory-maze.png" alt="Memory-Maze: Scenario Driven Visual Language Navigation Benchmark for Guiding Blind People" loading="lazy"></div>
   <div class="project-item__body">
-    <div class="project-item__title">Memory-Maze: Scenario Driven Visual Language Navigation Benchmark for Guiding Blind People</div>
+    <div class="project-item__title"><a href="https://doi.org/10.1109/LRA.2025.3615028" target="_blank" rel="noopener noreferrer">Memory-Maze: Scenario Driven Visual Language Navigation Benchmark for Guiding Blind People</a></div>
     <div class="project-item__venue">RA-L 2025</div>
     <div class="project-item__authors"><strong class="project-item__self">Masaki Kuribayashi*</strong>, Kohei Uehara*, Allan Wang, Daisuke Sato, Renato Ribeiro, Simon Chu, and Shigeo Morishima</div>
   </div>
@@ -95,7 +103,7 @@ Resercher at Miraikan Accessibility Lab.
 <div class="project-item">
   <div class="project-item__media"><img src="/images/papers/chitchatguide.png" alt="ChitChatGuide: Conversational Interaction Using Large Language Models for Assisting People with Visual Impairments to Explore a Shopping Mall" loading="lazy"></div>
   <div class="project-item__body">
-    <div class="project-item__title">ChitChatGuide: Conversational Interaction Using Large Language Models for Assisting People with Visual Impairments to Explore a Shopping Mall</div>
+    <div class="project-item__title"><a href="https://doi.org/10.1145/3676492" target="_blank" rel="noopener noreferrer">ChitChatGuide: Conversational Interaction Using Large Language Models for Assisting People with Visual Impairments to Explore a Shopping Mall</a></div>
     <div class="project-item__venue">MobileHCI 2024</div>
     <div class="project-item__authors">Yuka Kaniwa*, <strong class="project-item__self">Masaki Kuribayashi*</strong>, Seita Kayukawa, Daisuke Sato, Hironobu Takagi, Chieko Asakawa, Shigeo Morishima</div>
   </div>
@@ -103,7 +111,7 @@ Resercher at Miraikan Accessibility Lab.
 <div class="project-item">
   <div class="project-item__media"><img src="/images/papers/snapnav.png" alt="Snap&amp;Nav: Smartphone-based Indoor Navigation System For Blind People via Floor Map Analysis and Intersection Detection" loading="lazy"></div>
   <div class="project-item__body">
-    <div class="project-item__title">Snap&amp;Nav: Smartphone-based Indoor Navigation System For Blind People via Floor Map Analysis and Intersection Detection</div>
+    <div class="project-item__title"><a href="https://doi.org/10.1145/3676522" target="_blank" rel="noopener noreferrer">Snap&amp;Nav: Smartphone-based Indoor Navigation System For Blind People via Floor Map Analysis and Intersection Detection</a></div>
     <div class="project-item__venue">MobileHCI 2024</div>
     <div class="project-item__authors">Masaya Kubota*, <strong class="project-item__self">Masaki Kuribayashi*</strong>, Seita Kayukawa, Hironobu Takagi, Chieko Asakawa, Shigeo Morishima</div>
   </div>
@@ -111,7 +119,7 @@ Resercher at Miraikan Accessibility Lab.
 <div class="project-item">
   <div class="project-item__media"><img src="/images/papers/heejay_neurips_2024.gif" alt="Text to Blind Motion" loading="lazy"></div>
   <div class="project-item__body">
-    <div class="project-item__title">Text to Blind Motion</div>
+    <div class="project-item__title"><a href="https://doi.org/10.52202/079017-0519" target="_blank" rel="noopener noreferrer">Text to Blind Motion</a></div>
     <div class="project-item__venue">NeurIPS 2024</div>
     <div class="project-item__authors">Hee Jae Kim, Kathakoli Sengupta, <strong class="project-item__self">Masaki Kuribayashi</strong>, Hernisa Kacorri, Eshed Ohn-Bar</div>
   </div>
@@ -119,7 +127,7 @@ Resercher at Miraikan Accessibility Lab.
 <div class="project-item">
   <div class="project-item__media"><img src="/images/papers/pathfinder.png" alt="PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings" loading="lazy"></div>
   <div class="project-item__body">
-    <div class="project-item__title">PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings</div>
+    <div class="project-item__title"><a href="https://doi.org/10.1145/3544548.3580687" target="_blank" rel="noopener noreferrer">PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings</a></div>
     <div class="project-item__venue">CHI 2023</div>
     <div class="project-item__authors"><strong class="project-item__self">Masaki Kuribayashi</strong>, Tatsuya Ishihara, Daisuke Sato, Jayakorn Vongkulbhisal, Karnik Ram, Seita Kayukawa, Hironobu Takagi, Shigeo Morishima, and Chieko Asakawa</div>
   </div>
@@ -127,7 +135,7 @@ Resercher at Miraikan Accessibility Lab.
 <div class="project-item">
   <div class="project-item__media"><img src="/images/papers/miura_ah_2023.jpg" alt="Exploration of Sonification Feedback for People with Visual Impairment to Use Ski Simulator" loading="lazy"></div>
   <div class="project-item__body">
-    <div class="project-item__title">Exploration of Sonification Feedback for People with Visual Impairment to Use Ski Simulator</div>
+    <div class="project-item__title"><a href="https://doi.org/10.1145/3582700.3582702" target="_blank" rel="noopener noreferrer">Exploration of Sonification Feedback for People with Visual Impairment to Use Ski Simulator</a></div>
     <div class="project-item__venue">AHs 2023</div>
     <div class="project-item__authors">Yusuke Miura, Erwin Wu, <strong class="project-item__self">Masaki Kuribayashi</strong>, Hideki Koike, Shigeo Morishima</div>
   </div>
@@ -135,7 +143,7 @@ Resercher at Miraikan Accessibility Lab.
 <div class="project-item">
   <div class="project-item__media"><img src="/images/papers/corridorwalker.png" alt="Corridor-Walker: Mobile Indoor Walking Assistance for Blind People to Avoid Obstacles and Recognize Intersections" loading="lazy"></div>
   <div class="project-item__body">
-    <div class="project-item__title">Corridor-Walker: Mobile Indoor Walking Assistance for Blind People to Avoid Obstacles and Recognize Intersections</div>
+    <div class="project-item__title"><a href="https://doi.org/10.1145/3546714" target="_blank" rel="noopener noreferrer">Corridor-Walker: Mobile Indoor Walking Assistance for Blind People to Avoid Obstacles and Recognize Intersections</a></div>
     <div class="project-item__venue">MobileHCI 2022</div>
     <div class="project-item__authors"><strong class="project-item__self">Masaki Kuribayashi</strong>, Seita Kayukawa, Jayakorn Vongkulbhisal, Daisuke Sato, Chieko Asakawa, Hironobu Takagi, Shigeo Morishima</div>
   </div>
@@ -143,7 +151,7 @@ Resercher at Miraikan Accessibility Lab.
 <div class="project-item">
   <div class="project-item__media"><img src="/images/papers/linechaser.png" alt="LineChaser: A Smartphone-Based Navigation System for Blind People to Stand in Line" loading="lazy"></div>
   <div class="project-item__body">
-    <div class="project-item__title">LineChaser: A Smartphone-Based Navigation System for Blind People to Stand in Line</div>
+    <div class="project-item__title"><a href="https://dl.acm.org/doi/10.1145/3411764.3445451" target="_blank" rel="noopener noreferrer">LineChaser: A Smartphone-Based Navigation System for Blind People to Stand in Line</a></div>
     <div class="project-item__venue">CHI 2021</div>
     <div class="project-item__authors"><strong class="project-item__self">Masaki Kuribayashi*</strong>, Seita Kayukawa*, Hironobu Takagi, Chieko Asakawa, and Shigeo Morishima</div>
     <div class="project-item__award">Award: Azusa Ono Memorial Award</div>
@@ -160,7 +168,7 @@ Resercher at Miraikan Accessibility Lab.
 <div class="project-item">
   <div class="project-item__media"><img src="/images/papers/taguchi_2025_siggraphasia.png" alt="Spatial Audio for Ski Simulation with Visually Impaired Users in Dynamic Environments" loading="lazy"></div>
   <div class="project-item__body">
-    <div class="project-item__title">Spatial Audio for Ski Simulation with Visually Impaired Users in Dynamic Environments</div>
+    <div class="project-item__title"><a href="https://doi.org/10.1145/3757374.3771466" target="_blank" rel="noopener noreferrer">Spatial Audio for Ski Simulation with Visually Impaired Users in Dynamic Environments</a></div>
     <div class="project-item__venue">SA 2025 Posters</div>
     <div class="project-item__authors">Yuta Taguchi, Toshihiro Hirano, <strong class="project-item__self">Masaki Kuribayashi</strong>, Yichen Peng, Erwin Wu, Hideki Koike, Shigeo Morishima</div>
   </div>
@@ -168,7 +176,7 @@ Resercher at Miraikan Accessibility Lab.
 <div class="project-item">
   <div class="project-item__media"><img src="/images/papers/kubota_uist_2025.png" alt="Investigating Blind People&#x27;s Route Perception of Complex Pre-Mapped Routes in Virtual Reality" loading="lazy"></div>
   <div class="project-item__body">
-    <div class="project-item__title">Investigating Blind People&#x27;s Route Perception of Complex Pre-Mapped Routes in Virtual Reality</div>
+    <div class="project-item__title"><a href="https://doi.org/10.1145/3746058.3758403" target="_blank" rel="noopener noreferrer">Investigating Blind People&#x27;s Route Perception of Complex Pre-Mapped Routes in Virtual Reality</a></div>
     <div class="project-item__venue">UIST 2025 Posters</div>
     <div class="project-item__authors">Masaya Kubota, <strong class="project-item__self">Masaki Kuribayashi</strong>, Renato Ribeiro, and Shigeo Morishima</div>
   </div>

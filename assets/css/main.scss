@@ -89,6 +89,16 @@
   margin-bottom: 0.35rem;
 }
 
+.page__content .long-form-content .project-item__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page__content .long-form-content .project-item__title a:hover,
+.page__content .long-form-content .project-item__title a:focus-visible {
+  text-decoration: underline;
+}
+
 .page__content .long-form-content .project-item__venue {
   font-size: 0.82em;
   line-height: 1.4;
