@@ -354,6 +354,8 @@ def render_news_item(row: dict[str, str]) -> str:
     url = clean_text(row.get("url", "")) or clean_text(row.get("link", ""))
 
     title_part = f"[{title}]({url})" if (title and URL_RE.match(url)) else title
+    if title_part:
+        title_part = f"**{title_part}**"
     if date and title_part:
         return f"- {date}: {title_part}"
     if title_part:

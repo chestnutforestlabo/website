@@ -15,10 +15,10 @@ Resercher at Miraikan Accessibility Lab.
 
 ## News
 
-- Feb. 2026: One poster paper is accepted to CHI2026!<br>
-- Feb. 2026: One paper is accepted to ICRA2026!<br>
-- Jan. 2026: Two papers are accepted to CHI2026!<br>
-- Aug. 2025: One paper has been accepted to RA-L!<br>
+- Feb. 2026: **One poster paper is accepted to CHI2026!**<br>
+- Feb. 2026: **One paper is accepted to ICRA2026!**<br>
+- Jan. 2026: **Two papers are accepted to CHI2026!**<br>
+- Aug. 2025: **One paper has been accepted to RA-L!**<br>
 
 ## Bio
 
