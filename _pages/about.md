@@ -15,9 +15,10 @@ Resercher at Miraikan Accessibility Lab.
 
 ## News
 
-1. 2026-03-10: [Started a new project on assistive indoor navigation with multimodal models.](https://example.com/news/assistive-navigation-kickoff)<br>
-2. 2026-02-22: [Presented our latest accessibility research at a university seminar.](https://example.com/news/university-seminar)<br>
-3. 2026-01-15: [Released updated publication and project pages on this website.](https://example.com/news/site-update)<br>
+1. Feb. 2026: One poster paper is accepted to CHI2026!<br>
+2. Feb. 2026: One paper is accepted to ICRA2026!<br>
+3. Jan. 2026: Two papers are accepted to CHI2026!<br>
+4. Aug. 2025: One paper has been accepted to RA-L!<br>
 
 ## Projects
 
@@ -25,28 +26,31 @@ Resercher at Miraikan Accessibility Lab.
 
 <div class="project-list">
 <div class="project-item">
-  <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="Time-Aware Assistive Navigation" loading="lazy"></div>
+  <div class="project-item__media"><img src="/images/papers/masaki_icra_2026.png" alt="Time-Aware Assistive Navigation" loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">Time-Aware Assistive Navigation</div>
     <div class="project-item__venue">ICRA 2026</div>
+    <div class="project-item__authors"><strong class="project-item__self">Masaki Kuribayashi*</strong>, Zhongkai Shangguan*, Eshed Ohn-Bar</div>
   </div>
 </div>
 <div class="project-item">
-  <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="Robot-Assisted Group Tours for Blind People" loading="lazy"></div>
+  <div class="project-item__media"><img src="/images/papers/rayna_chi_2026.png" alt="Robot-Assisted Group Tours for Blind People" loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">Robot-Assisted Group Tours for Blind People</div>
     <div class="project-item__venue">CHI 2026</div>
+    <div class="project-item__authors">Rayna Hata, <strong class="project-item__self">Masaki Kuribayashi</strong>, Allan Wang, Hironobu Takagi, Chieko Asakawa</div>
   </div>
 </div>
 <div class="project-item">
-  <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="How Does Delegation in Social Interaction Evolve Over Time? Navigation with a Robot for Blind People" loading="lazy"></div>
+  <div class="project-item__media"><img src="/images/papers/yaxin_chi_2026.png" alt="How Does Delegation in Social Interaction Evolve Over Time? Navigation with a Robot for Blind People" loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">How Does Delegation in Social Interaction Evolve Over Time? Navigation with a Robot for Blind People</div>
     <div class="project-item__venue">CHI 2026</div>
+    <div class="project-item__authors">Yaxin Hu, <strong class="project-item__self">Masaki Kuribayashi</strong>, Allan Wang, Seita Kayukawa, Daisuke Sato, Bilge Mutlu, Hironobu Takagi, Chieko Asakawa</div>
   </div>
 </div>
 <div class="project-item">
-  <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="SlopeNav: A Realtime Wearable Blind Ski Assistance System with Adaptive Path Planning for Simulated Environments." loading="lazy"></div>
+  <div class="project-item__media"><img src="/images/papers/slopenav.png" alt="SlopeNav: A Realtime Wearable Blind Ski Assistance System with Adaptive Path Planning for Simulated Environments." loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">SlopeNav: A Realtime Wearable Blind Ski Assistance System with Adaptive Path Planning for Simulated Environments.</div>
     <div class="project-item__venue">AHs 2025</div>
@@ -54,23 +58,25 @@ Resercher at Miraikan Accessibility Lab.
   </div>
 </div>
 <div class="project-item">
-  <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People." loading="lazy"></div>
+  <div class="project-item__media"><img src="/images/papers/wanderguide.png" alt="WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People." loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People.</div>
     <div class="project-item__venue">CHI 2025</div>
     <div class="project-item__authors"><strong class="project-item__self">Masaki Kuribayashi</strong>, Kohei Uehara, Allan Wang, Shigeo Morishima, and Chieko Asakawa</div>
+    <div class="project-item__award">Award: Azusa Ono Memorial Award</div>
   </div>
 </div>
 <div class="project-item">
-  <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="Understanding and Supporting Formal Email Exchange by Answering AI-Generated Questions." loading="lazy"></div>
+  <div class="project-item__media"><img src="/images/papers/miura_chi_2025.png" alt="Understanding and Supporting Formal Email Exchange by Answering AI-Generated Questions." loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">Understanding and Supporting Formal Email Exchange by Answering AI-Generated Questions.</div>
     <div class="project-item__venue">CHI 2025</div>
     <div class="project-item__authors">Yusuke Miura, Chi-Lan Yang, <strong class="project-item__self">Masaki Kuribayashi</strong>, Keigo Matsumoto, Hideki Kuzuoka, and Shigeo Morishima</div>
+    <div class="project-item__award">Award: CHI 2026 Honorable Mention, Azusa Ono Memorial Award</div>
   </div>
 </div>
 <div class="project-item">
-  <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="Memory-Maze: Scenario Driven Visual Language Navigation Benchmark for Guiding Blind People." loading="lazy"></div>
+  <div class="project-item__media"><img src="/images/papers/memory-maze.png" alt="Memory-Maze: Scenario Driven Visual Language Navigation Benchmark for Guiding Blind People." loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">Memory-Maze: Scenario Driven Visual Language Navigation Benchmark for Guiding Blind People.</div>
     <div class="project-item__venue">RA-L 2025</div>
@@ -78,7 +84,7 @@ Resercher at Miraikan Accessibility Lab.
   </div>
 </div>
 <div class="project-item">
-  <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="ChitChatGuide: Conversational Interaction Using Large Language Models for Assisting People with Visual Impairments to Explore a Shopping Mall." loading="lazy"></div>
+  <div class="project-item__media"><img src="/images/papers/chitchatguide.png" alt="ChitChatGuide: Conversational Interaction Using Large Language Models for Assisting People with Visual Impairments to Explore a Shopping Mall." loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">ChitChatGuide: Conversational Interaction Using Large Language Models for Assisting People with Visual Impairments to Explore a Shopping Mall.</div>
     <div class="project-item__venue">MobileHCI 2024</div>
@@ -86,7 +92,7 @@ Resercher at Miraikan Accessibility Lab.
   </div>
 </div>
 <div class="project-item">
-  <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="Snap&amp;Nav: Smartphone-based Indoor Navigation System For Blind People via Floor Map Analysis and Intersection Detection." loading="lazy"></div>
+  <div class="project-item__media"><img src="/images/papers/snapnav.png" alt="Snap&amp;Nav: Smartphone-based Indoor Navigation System For Blind People via Floor Map Analysis and Intersection Detection." loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">Snap&amp;Nav: Smartphone-based Indoor Navigation System For Blind People via Floor Map Analysis and Intersection Detection.</div>
     <div class="project-item__venue">MobileHCI 2024</div>
@@ -94,7 +100,7 @@ Resercher at Miraikan Accessibility Lab.
   </div>
 </div>
 <div class="project-item">
-  <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="Text to Blind Motion." loading="lazy"></div>
+  <div class="project-item__media"><img src="/images/papers/heejay_neurips_2024.gif" alt="Text to Blind Motion." loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">Text to Blind Motion.</div>
     <div class="project-item__venue">NeurIPS 2024</div>
@@ -102,7 +108,7 @@ Resercher at Miraikan Accessibility Lab.
   </div>
 </div>
 <div class="project-item">
-  <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings." loading="lazy"></div>
+  <div class="project-item__media"><img src="/images/papers/pathfinder.png" alt="PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings." loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings.</div>
     <div class="project-item__venue">CHI 2023</div>
@@ -110,7 +116,7 @@ Resercher at Miraikan Accessibility Lab.
   </div>
 </div>
 <div class="project-item">
-  <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="Exploration of Sonification Feedback for People with Visual Impairment to Use Ski Simulator." loading="lazy"></div>
+  <div class="project-item__media"><img src="/images/papers/miura_ah_2023.jpg" alt="Exploration of Sonification Feedback for People with Visual Impairment to Use Ski Simulator." loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">Exploration of Sonification Feedback for People with Visual Impairment to Use Ski Simulator.</div>
     <div class="project-item__venue">AHs 2023</div>
@@ -118,7 +124,7 @@ Resercher at Miraikan Accessibility Lab.
   </div>
 </div>
 <div class="project-item">
-  <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="Corridor-Walker: Mobile Indoor Walking Assistance for Blind People to Avoid Obstacles and Recognize Intersections." loading="lazy"></div>
+  <div class="project-item__media"><img src="/images/papers/corridorwalker.png" alt="Corridor-Walker: Mobile Indoor Walking Assistance for Blind People to Avoid Obstacles and Recognize Intersections." loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">Corridor-Walker: Mobile Indoor Walking Assistance for Blind People to Avoid Obstacles and Recognize Intersections.</div>
     <div class="project-item__venue">MobileHCI 2022</div>
@@ -126,7 +132,7 @@ Resercher at Miraikan Accessibility Lab.
   </div>
 </div>
 <div class="project-item">
-  <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="LineChaser: A Smartphone-Based Navigation System for Blind People to Stand in Line." loading="lazy"></div>
+  <div class="project-item__media"><img src="/images/papers/linechaser.png" alt="LineChaser: A Smartphone-Based Navigation System for Blind People to Stand in Line." loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">LineChaser: A Smartphone-Based Navigation System for Blind People to Stand in Line.</div>
     <div class="project-item__venue">CHI 2021</div>
@@ -145,13 +151,10 @@ Resercher at Miraikan Accessibility Lab.
 
 ## Academic Service
 
-1. **Navigation System for Blind People** (Creative Japan Session at Siggraph ASIA 2025) - Dec 2025<br>
-2. **WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People** (CHI 2025 Symposium) - May 2025<br>
-3. **PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings** (Global Creative Leaders Society, The University of Tokyo) - Mar 2025<br>
-4. **Research Introduction; Map-less Navigation System for Blind People** (A11y Meetup, Cybozu (Japan)) - Feb 2025<br>
-5. **PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings** (Forum on Information Technology (FIT 2024)) - Sep 2024<br>
-6. **PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings** (Workshop on Interactive Systems and Software (WISS 2023)) - Nov 2023<br>
-7. **Introduction to Accessibility Research** (Hong Kong Japanese School) - May 2023<br>
+1. Service: Assistants to Local Chairs, Organizing Committee of CHI2025<br>
+2. Service: Associate Chair of CHI LBW 2025<br>
+3. Service: External Reviewer of ASSETS, CHI, IMWUT, Mobile HCI, ICRA, and HRI<br>
+4. Service: Miraikan Accessibility Networking Event Organizer<br>
 
 ## Fellowships
 
@@ -164,13 +167,14 @@ Resercher at Miraikan Accessibility Lab.
 
 ## Talks
 
-1. **Navigation System for Blind People** (Creative Japan Session at Siggraph ASIA 2025) - Dec 2025<br>
-2. **WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People** (CHI 2025 Symposium) - May 2025<br>
-3. **PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings** (Global Creative Leaders Society, The University of Tokyo) - Mar 2025<br>
-4. **Research Introduction; Map-less Navigation System for Blind People** (A11y Meetup, Cybozu (Japan)) - Feb 2025<br>
-5. **PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings** (Forum on Information Technology (FIT 2024)) - Sep 2024<br>
-6. **PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings** (Workshop on Interactive Systems and Software (WISS 2023)) - Nov 2023<br>
-7. **Introduction to Accessibility Research** (Hong Kong Japanese School) - May 2023<br>
+1. **視覚障害者のMap-less Navigation System実現のための協調インタラクション** (SSII 2026 Organized Session 人が使う画像センシング) - Jun 2026<br>
+2. **Navigation System for Blind People** (Creative Japan Session at Siggraph ASIA 2025) - Dec 2025<br>
+3. **WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People** (CHI 2025 Symposium) - May 2025<br>
+4. **PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings** (Global Creative Leaders Society, The University of Tokyo) - Mar 2025<br>
+5. **Research Introduction; Map-less Navigation System for Blind People** (A11y Meetup, Cybozu (Japan)) - Feb 2025<br>
+6. **PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings** (Forum on Information Technology (FIT 2024)) - Sep 2024<br>
+7. **PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings** (Workshop on Interactive Systems and Software (WISS 2023)) - Nov 2023<br>
+8. **Introduction to Accessibility Research** (Hong Kong Japanese School) - May 2023<br>
 
 ## Articles
 
@@ -180,5 +184,7 @@ Resercher at Miraikan Accessibility Lab.
 4. [研究入門者のための研究ツール・Tips紹介](https://note.com/chestnutforest/n/n3ad54b1aa5f8)<br>
 5. [HCIからCVへ](https://note.com/chestnutforest/n/nafb01d21a878)<br>
 6. [Hugging FaceにSSHで接続してGitでモデルをPushする方法](https://qiita.com/chestnutforestlabo/items/cf1b4eb94ab68ed56f25)<br>
+7. [視覚障害者の移動 第3の選択肢 「AIスーツケース」開発スタッフに聞く](https://mext-gov.note.jp/n/nf676373b0d8d)<br>
+8. [Coding Accessibility: Dr. Asakawa Audio Descriptive Version](https://www.youtube.com/watch?v=kIgMb-PhhbQ)<br>
 
 </div>

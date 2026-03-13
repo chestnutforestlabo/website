@@ -20,12 +20,12 @@ author_profile: true
 6. Masaya Kubota\*, **Masaki Kuribayashi**\*, Seita Kayukawa, Hironobu Takagi, Chieko Asakawa, Shigeo Morishima. **Snap&Nav: Smartphone-based Indoor Navigation System For Blind People via Floor Map Analysis and Intersection Detection.**. MobileHCI 2024. (2024).<br>
 7. Hee Jae Kim, Kathakoli Sengupta, **Masaki Kuribayashi**, Hernisa Kacorri, Eshed Ohn-Bar. **Text to Blind Motion.**. NeurIPS 2024. (2024).<br>
 8. Toshihiro Hirano, Yichen Peng, **Masaki Kuribayashi**, Erwin Wu, Shigeo Morishima, and Hideki Koike. **SlopeNav: A Realtime Wearable Blind Ski Assistance System with Adaptive Path Planning for Simulated Environments.**. AHs 2025. (2025).<br>
-9. **Masaki Kuribayashi**, Kohei Uehara, Allan Wang, Shigeo Morishima, and Chieko Asakawa. **WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People.**. CHI 2025. (2025).<br>
-10. Yusuke Miura, Chi-Lan Yang, **Masaki Kuribayashi**, Keigo Matsumoto, Hideki Kuzuoka, and Shigeo Morishima. **Understanding and Supporting Formal Email Exchange by Answering AI-Generated Questions.**. CHI 2025. (2025).<br>
+9. **Masaki Kuribayashi**, Kohei Uehara, Allan Wang, Shigeo Morishima, and Chieko Asakawa. **WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People.**. CHI 2025. (2025). Award: Azusa Ono Memorial Award.<br>
+10. Yusuke Miura, Chi-Lan Yang, **Masaki Kuribayashi**, Keigo Matsumoto, Hideki Kuzuoka, and Shigeo Morishima. **Understanding and Supporting Formal Email Exchange by Answering AI-Generated Questions.**. CHI 2025. (2025). Award: CHI 2026 Honorable Mention, Azusa Ono Memorial Award.<br>
 11. **Masaki Kuribayashi**\*, Kohei Uehara\*, Allan Wang, Daisuke Sato, Renato Ribeiro, Simon Chu, and Shigeo Morishima. **Memory-Maze: Scenario Driven Visual Language Navigation Benchmark for Guiding Blind People.**. RA-L 2025. (2025).<br>
-12. **Time-Aware Assistive Navigation**. ICRA 2026. (2026).<br>
-13. **Robot-Assisted Group Tours for Blind People**. CHI 2026. (2026).<br>
-14. **How Does Delegation in Social Interaction Evolve Over Time? Navigation with a Robot for Blind People**. CHI 2026. (2026).<br>
+12. **Masaki Kuribayashi**\*, Zhongkai Shangguan\*, Eshed Ohn-Bar. **Time-Aware Assistive Navigation**. ICRA 2026. (2026).<br>
+13. Rayna Hata, **Masaki Kuribayashi**, Allan Wang, Hironobu Takagi, Chieko Asakawa. **Robot-Assisted Group Tours for Blind People**. CHI 2026. (2026).<br>
+14. Yaxin Hu, **Masaki Kuribayashi**, Allan Wang, Seita Kayukawa, Daisuke Sato, Bilge Mutlu, Hironobu Takagi, Chieko Asakawa. **How Does Delegation in Social Interaction Evolve Over Time? Navigation with a Robot for Blind People**. CHI 2026. (2026).<br>
 
 #### Short Papers
 
