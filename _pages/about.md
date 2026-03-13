@@ -22,6 +22,7 @@ Resercher at Miraikan Accessibility Lab.
 
 ## Bio
 
+- Apr. 2023 - Current: **Ph.D. Student at Waseda University**<br>
 - Apr. 2023 - Current: **Research Fellow of the Japan Society for the Promotion of Science (DC1)**<br>
 - Aug. 2024 - Current: **Part Time Researcher, Miraikan Accessibility Lab, Miraikan - The National Museum of Emerging Science and Innovation**<br>
 - Aug. 2025 - Oct. 2025: **Intern, Woven By Toyota**<br>
