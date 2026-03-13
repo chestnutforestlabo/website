@@ -210,7 +210,6 @@ def get_csv_by_relative_path(data_dir: Path, csv_files: list[Path], relative_pat
 
 
 def render_publication_item(index: int, row: dict[str, str]) -> str:
-    year = clean_text(row.get("year", ""))
     authors_raw = strip_equal_contribution_note(row.get("authors", ""))
     authors = emphasize_author_names(clean_text(authors_raw))
     title = clean_text(row.get("title", ""))
@@ -224,8 +223,6 @@ def render_publication_item(index: int, row: dict[str, str]) -> str:
         parts.append(f"**{title}**")
     if venue:
         parts.append(venue)
-    if year:
-        parts.append(f"({year})")
     if award:
         parts.append(f"Award: {award}")
 
@@ -340,6 +337,9 @@ def render_generic_item(
         value = clean_text(row.get(col, ""))
         if not value:
             continue
+        if col.lower() == "service":
+            chunks.append(value)
+            continue
         if col.lower() in {"url", "link", "paper_url", "slides", "doi"}:
             chunks.append(format_cell(col, value))
         else:
@@ -348,17 +348,29 @@ def render_generic_item(
     return " | ".join(chunks) if chunks else "-"
 
 
-def render_news_item(index: int, row: dict[str, str]) -> str:
+def render_news_item(row: dict[str, str]) -> str:
     date = clean_text(row.get("date", ""))
     title = clean_text(row.get("title", ""))
     url = clean_text(row.get("url", "")) or clean_text(row.get("link", ""))
 
     title_part = f"[{title}]({url})" if (title and URL_RE.match(url)) else title
     if date and title_part:
-        return f"{index}. {date}: {title_part}"
+        return f"- {date}: {title_part}"
     if title_part:
-        return f"{index}. {title_part}"
-    return f"{index}. -"
+        return f"- {title_part}"
+    return "- -"
+
+
+def render_bio_item(row: dict[str, str]) -> str:
+    date = clean_text(row.get("date", ""))
+    title = clean_text(row.get("title", ""))
+    if date and title:
+        return f"- {date}: {title}"
+    if title:
+        return f"- {title}"
+    if date:
+        return f"- {date}"
+    return "- -"
 
 
 def build_section_entries(csv_path: Path, data_dir: Path) -> list[str]:
@@ -383,6 +395,8 @@ def build_section_entries(csv_path: Path, data_dir: Path) -> list[str]:
         render_generic_item(columns, row, date_last=date_last, bold_title=bold_title)
         for row in rows
     ]
+    if rel == "academic_service.csv":
+        return [f"- {entry}" for entry in entries]
     if rel in {"awards.csv", "academic_service.csv", "articles.csv", "fellowships.csv", "talks.csv"}:
         return [f"{i}. {entry}" for i, entry in enumerate(entries, start=1)]
     return entries
@@ -398,16 +412,31 @@ def build_markdown(data_dir: Path, csv_files: list[Path]) -> str:
 
     # 1) News
     news_csv = get_csv_by_relative_path(data_dir, csv_files, "news.csv")
+    bio_csv = get_csv_by_relative_path(data_dir, csv_files, "bio.csv")
     news_rows: list[dict[str, str]] = []
+    bio_rows: list[dict[str, str]] = []
     if news_csv is not None:
         _, rows = read_csv_rows(news_csv)
         news_rows = sort_rows_newest_first(rows)
+    if bio_csv is not None:
+        _, rows = read_csv_rows(bio_csv)
+        bio_rows = rows
 
     lines.append("## News")
     lines.append("")
     if news_rows:
-        for i, row in enumerate(news_rows, start=1):
-            lines.append(f"{render_news_item(i, row)}<br>")
+        for row in news_rows:
+            lines.append(f"{render_news_item(row)}<br>")
+    else:
+        lines.append("_No data available._<br>")
+    lines.append("")
+
+    # 2) Bio
+    lines.append("## Bio")
+    lines.append("")
+    if bio_rows:
+        for row in bio_rows:
+            lines.append(f"{render_bio_item(row)}<br>")
     else:
         lines.append("_No data available._<br>")
     lines.append("")
@@ -449,7 +478,7 @@ def build_markdown(data_dir: Path, csv_files: list[Path]) -> str:
         ("academic_service.csv", "Academic Service"),
         ("fellowships.csv", "Fellowships"),
         ("talks.csv", "Talks"),
-        ("articles.csv", "Articles"),
+        ("articles.csv", "Media"),
     ]
     for rel_path, title in ordered_sections:
         csv_path = get_csv_by_relative_path(data_dir, csv_files, rel_path)
@@ -492,13 +521,18 @@ def build_publication_markdown(data_dir: Path, csv_files: list[Path]) -> str:
         "",
         LONG_FORM_OPEN,
         "",
-        EQUAL_CONTRIBUTION_NOTE,
-        "",
-        "### English Publications",
-        "",
-        "#### Full Papers",
-        "",
     ]
+
+    lines.extend(
+        [
+            EQUAL_CONTRIBUTION_NOTE,
+            "",
+            "### English Publications",
+            "",
+            "#### Full Papers",
+            "",
+        ]
+    )
 
     pub_index = 1
     if not full_rows_oldest:
