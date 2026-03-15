@@ -9,7 +9,7 @@ redirect_from:
 
 Resercher at Miraikan Accessibility Lab.
 
-**Reserach Interest**: Human Computer Interaction (HCI), Accessibility, Human-Centered AI
+**Interest**: Human Computer Interaction (HCI), Accessibility, Human-Centered AI
 
 <div class="long-form-content" markdown="1">
 
