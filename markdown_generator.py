@@ -169,6 +169,11 @@ def strip_equal_contribution_note(text: str) -> str:
     return cleaned.strip()
 
 
+def is_phd_thesis_row(row: dict[str, str]) -> bool:
+    venue = clean_plain_text(row.get("venue", "")).lower()
+    return venue == "phd thesis"
+
+
 def emphasize_author_names(text: str) -> str:
     text = re.sub(r"Masaki Kuribayashi(\\\*)?", r"**Masaki Kuribayashi**\1", text)
     text = re.sub(r"栗林雅希(\\\*)?", r"**栗林雅希**\1", text)
@@ -224,7 +229,6 @@ def render_publication_item(index: int, row: dict[str, str]) -> str:
     title = clean_text(row.get("title", ""))
     venue = clean_text(row.get("venue", ""))
     award = clean_text(row.get("award", ""))
-    paper_href = resolve_site_href(row.get("paper_url", ""))
 
     parts: list[str] = []
     if authors:
@@ -232,15 +236,12 @@ def render_publication_item(index: int, row: dict[str, str]) -> str:
     if title:
         parts.append(f"**{title}**")
     if venue:
-        venue_part = venue
-        if paper_href:
-            venue_part = f"{venue_part} {render_pdf_icon_link(paper_href)}"
-        parts.append(venue_part)
+        parts.append(venue)
     if award:
-        parts.append(f"Award: {award}")
+        parts.append(award)
 
     links: list[str] = []
-    for key in ("doi", "url", "slides"):
+    for key in ("url", "slides"):
         value = clean_text(row.get(key, ""))
         if not value:
             continue
@@ -342,7 +343,7 @@ def render_project_item(row: dict[str, str]) -> str:
     if authors_html:
         body_lines.append(f'    <div class="project-item__authors">{authors_html}</div>')
     if award_html:
-        body_lines.append(f'    <div class="project-item__award">Award: {award_html}</div>')
+        body_lines.append(f'    <div class="project-item__award">{award_html}</div>')
 
     return "\n".join(
         [
@@ -436,8 +437,7 @@ def build_section_entries(csv_path: Path, data_dir: Path) -> list[str]:
         return ["_No data available._"]
 
     if is_publications_csv(csv_path, data_dir):
-        sorted_rows = sort_rows_newest_first(rows)
-        return [render_publication_item(i, row) for i, row in enumerate(sorted_rows, start=1)]
+        return [render_publication_item(i, row) for i, row in enumerate(rows, start=1)]
     rel = csv_path.relative_to(data_dir).as_posix()
     date_last = rel in {
         "awards.csv",
@@ -558,13 +558,13 @@ def build_publication_markdown(data_dir: Path, csv_files: list[Path]) -> str:
 
     if en_main is not None:
         _, rows = read_csv_rows(en_main)
-        full_rows = sort_rows_newest_first(rows)
+        full_rows = [row for row in rows if not is_phd_thesis_row(row)]
     if en_short is not None:
         _, rows = read_csv_rows(en_short)
-        short_rows = sort_rows_newest_first(rows)
+        short_rows = rows
     if jp_csv is not None:
         _, rows = read_csv_rows(jp_csv)
-        jp_rows = sort_rows_newest_first(rows)
+        jp_rows = rows
 
     lines: list[str] = [
         PUBLICATION_TOP_BLOCK.rstrip(),

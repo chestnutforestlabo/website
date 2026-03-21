@@ -215,6 +215,10 @@ def sort_by_date_desc(rows: list[dict[str, str]], key: str = "date") -> list[dic
     return sorted(rows, key=lambda row: date_sort_key(row.get(key, "")), reverse=True)
 
 
+def sort_by_date_asc(rows: list[dict[str, str]], key: str = "date") -> list[dict[str, str]]:
+    return sorted(rows, key=lambda row: date_sort_key(row.get(key, "")))
+
+
 def sort_by_year_desc(rows: list[dict[str, str]]) -> list[dict[str, str]]:
     return sorted(rows, key=lambda row: int(row.get("year", "0") or 0), reverse=True)
 
@@ -280,7 +284,7 @@ def publication_to_entry(row: dict[str, str], site_url: str) -> dict[str, object
 
     award = row.get("award", "")
     if award:
-        items.append(f"Award: {latex_text(award)}")
+        items.append(f"{latex_text(award)}")
 
     links: list[str] = []
     doi = local_or_remote_url(row.get("doi", ""), site_url)
@@ -602,7 +606,7 @@ def main() -> None:
     short_publication_entries = [
         publication_to_entry(row, site_url) for row in sort_by_year_desc(short_publications_rows)
     ]
-    talk_entries = [talk_to_entry(row, site_url) for row in sort_by_date_desc(talks_rows)]
+    talk_entries = [talk_to_entry(row, site_url) for row in sort_by_date_asc(talks_rows)]
     article_entries = [article_to_entry(row, site_url) for row in articles_rows]
 
     awards = [

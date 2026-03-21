@@ -81,7 +81,7 @@ Resercher at Miraikan Accessibility Lab.
     <div class="project-item__title"><a href="https://doi.org/10.1145/3706598.3713788" target="_blank" rel="noopener noreferrer">WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People</a></div>
     <div class="project-item__venue">CHI 2025 <a href="/data/project/masaki_kuribayashi_chi_2025/paper.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a></div>
     <div class="project-item__authors"><strong class="project-item__self">Masaki Kuribayashi</strong>, Kohei Uehara, Allan Wang, Shigeo Morishima, and Chieko Asakawa</div>
-    <div class="project-item__award">Award: Azusa Ono Memorial Award</div>
+    <div class="project-item__award">Azusa Ono Memorial Award</div>
   </div>
 </div>
 <div class="project-item">
@@ -90,7 +90,7 @@ Resercher at Miraikan Accessibility Lab.
     <div class="project-item__title"><a href="https://doi.org/10.1145/3706598.3714016" target="_blank" rel="noopener noreferrer">Understanding and Supporting Formal Email Exchange by Answering AI-Generated Questions</a></div>
     <div class="project-item__venue">CHI 2025 <a href="/data/project/yusuke_miura_chi_2025/paper.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a></div>
     <div class="project-item__authors">Yusuke Miura, Chi-Lan Yang, <strong class="project-item__self">Masaki Kuribayashi</strong>, Keigo Matsumoto, Hideki Kuzuoka, and Shigeo Morishima</div>
-    <div class="project-item__award">Award: CHI 2026 Honorable Mention, Azusa Ono Memorial Award</div>
+    <div class="project-item__award">CHI 2026 Honorable Mention, Azusa Ono Memorial Award</div>
   </div>
 </div>
 <div class="project-item">
@@ -155,14 +155,14 @@ Resercher at Miraikan Accessibility Lab.
     <div class="project-item__title"><a href="https://dl.acm.org/doi/10.1145/3411764.3445451" target="_blank" rel="noopener noreferrer">LineChaser: A Smartphone-Based Navigation System for Blind People to Stand in Line</a></div>
     <div class="project-item__venue">CHI 2021 <a href="/data/project/masaki_kuribayashi_chi_2021/paper.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a></div>
     <div class="project-item__authors"><strong class="project-item__self">Masaki Kuribayashi*</strong>, Seita Kayukawa*, Hironobu Takagi, Chieko Asakawa, and Shigeo Morishima</div>
-    <div class="project-item__award">Award: Azusa Ono Memorial Award</div>
+    <div class="project-item__award">Azusa Ono Memorial Award</div>
   </div>
 </div>
 <div class="project-item">
   <div class="project-item__media"><img src="/data/project/ikegami_momoka_chi_2026/image.png" alt="`Thank God I’m Fly!&#x27;&#x27;: A Gyaru Persona Chatbot for Adopting a Positive Mindset to Prevent and Mitigate Negative Emotions" loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">`Thank God I’m Fly!&#x27;&#x27;: A Gyaru Persona Chatbot for Adopting a Positive Mindset to Prevent and Mitigate Negative Emotions</div>
-    <div class="project-item__venue">CHI 2026 Posters</div>
+    <div class="project-item__venue">CHI 2026 Posters <a href="/data/project/ikegami_momoka_chi_2026" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a></div>
     <div class="project-item__authors">Momoka Ikegami, <strong class="project-item__self">Masaki Kuribayashi</strong>, Takuya Kato, Saizo Aoyagi, Tatsunori Hirai</div>
   </div>
 </div>
@@ -209,14 +209,14 @@ Resercher at Miraikan Accessibility Lab.
 
 ## Talks
 
-1. **視覚障害者のMap-less Navigation System実現のための協調インタラクション** (SSII 2026 Organized Session 人が使う画像センシング) - Jun 2026<br>
-2. **Navigation System for Blind People** (Creative Japan Session at Siggraph ASIA 2025) - Dec 2025<br>
-3. **WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People** (CHI 2025 Symposium) - May 2025<br>
-4. **PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings** (Global Creative Leaders Society, The University of Tokyo) - Mar 2025<br>
-5. **Research Introduction; Map-less Navigation System for Blind People** (A11y Meetup, Cybozu (Japan)) - Feb 2025<br>
-6. **PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings** (Forum on Information Technology (FIT 2024)) - Sep 2024<br>
-7. **PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings** (Workshop on Interactive Systems and Software (WISS 2023)) - Nov 2023<br>
-8. **Introduction to Accessibility Research** (Hong Kong Japanese School) - May 2023<br>
+1. **Introduction to Accessibility Research** (Hong Kong Japanese School) - May 2023<br>
+2. **PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings** (Workshop on Interactive Systems and Software (WISS 2023)) - Nov 2023<br>
+3. **PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings** (Forum on Information Technology (FIT 2024)) - Sep 2024<br>
+4. **Research Introduction; Map-less Navigation System for Blind People** (A11y Meetup, Cybozu (Japan)) - Feb 2025<br>
+5. **PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings** (Global Creative Leaders Society, The University of Tokyo) - Mar 2025<br>
+6. **WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People** (CHI 2025 Symposium) - May 2025<br>
+7. **Navigation System for Blind People** (Creative Japan Session at Siggraph ASIA 2025) - Dec 2025<br>
+8. **視覚障害者のMap-less Navigation System実現のための協調インタラクション** (SSII 2026 Organized Session 人が使う画像センシング) - Jun 2026<br>
 
 ## Media
 
