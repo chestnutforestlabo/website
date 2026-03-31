@@ -21,7 +21,7 @@ redirect_from:
   - /about.html
 ---
 
-Resercher at Miraikan Accessibility Lab.
+HCI Researcher at Woven By Toyota
 
 **Interest**: Human Computer Interaction (HCI), Accessibility, Human-Centered AI
 """

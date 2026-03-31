@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Resercher at Miraikan Accessibility Lab.
+HCI Researcher at Woven By Toyota
 
 **Interest**: Human Computer Interaction (HCI), Accessibility, Human-Centered AI
 
@@ -22,9 +22,10 @@ Resercher at Miraikan Accessibility Lab.
 
 ## Bio
 
-- Apr. 2023 - Current: **Ph.D. Student at Waseda University**<br>
-- Apr. 2023 - Current: **Research Fellow of the Japan Society for the Promotion of Science (DC1)**<br>
-- Aug. 2024 - Current: **Part Time Researcher, Miraikan Accessibility Lab, Miraikan - The National Museum of Emerging Science and Innovation**<br>
+- Apr. 2026 - Current: **HCI Researcher at Woven By Toyota**<br>
+- Apr. 2023 - Mar. 2026: **Ph.D. Student at Waseda University**<br>
+- Apr. 2023 - Mar. 2026: **Research Fellow of the Japan Society for the Promotion of Science (DC1)**<br>
+- Aug. 2024 - Mar. 2026: **Part Time Researcher, Miraikan Accessibility Lab, Miraikan - The National Museum of Emerging Science and Innovation**<br>
 - Aug. 2025 - Oct. 2025: **Intern, Woven By Toyota**<br>
 - Jan. 2024 - May. 2025: **Visiting Researcher, H2X lab, Boston University, Advisor: Eshed Ohn-Bar**<br>
 - Apr. 2021 - Jan. 2024: **Research Intern, IBM Research - Tokyo, Advisor: Hironobu Takagi, Chieko Asakawa, Tatsuya Ishihara**<br>
@@ -162,7 +163,7 @@ Resercher at Miraikan Accessibility Lab.
   <div class="project-item__media"><img src="/data/project/ikegami_momoka_chi_2026/image.png" alt="`Thank God I’m Fly!&#x27;&#x27;: A Gyaru Persona Chatbot for Adopting a Positive Mindset to Prevent and Mitigate Negative Emotions" loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">`Thank God I’m Fly!&#x27;&#x27;: A Gyaru Persona Chatbot for Adopting a Positive Mindset to Prevent and Mitigate Negative Emotions</div>
-    <div class="project-item__venue">CHI 2026 Posters <a href="/data/project/ikegami_momoka_chi_2026" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a></div>
+    <div class="project-item__venue">CHI 2026 Posters <a href="/data/project/ikegami_momoka_chi_2026/paper.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a></div>
     <div class="project-item__authors">Momoka Ikegami, <strong class="project-item__self">Masaki Kuribayashi</strong>, Takuya Kato, Saizo Aoyagi, Tatsunori Hirai</div>
   </div>
 </div>
