@@ -15,6 +15,7 @@ HCI Researcher at Woven By Toyota
 
 ## News
 
+- Apr. 2026 - Current: **I joined Woven By Toyota as an HCI Researcher!**<br>
 - Feb. 2026: **One poster paper is accepted to CHI2026!**<br>
 - Feb. 2026: **One paper is accepted to ICRA2026!**<br>
 - Jan. 2026: **Two papers are accepted to CHI2026!**<br>
