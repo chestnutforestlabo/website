@@ -24,8 +24,8 @@ author_profile: true
 10. Yusuke Miura, Chi-Lan Yang, **Masaki Kuribayashi**, Keigo Matsumoto, Hideki Kuzuoka, and Shigeo Morishima. **Understanding and Supporting Formal Email Exchange by Answering AI-Generated Questions**. CHI 2025. CHI 2026 Honorable Mention, Azusa Ono Memorial Award.<br>
 11. **Masaki Kuribayashi**\*, Kohei Uehara\*, Allan Wang, Daisuke Sato, Renato Ribeiro, Simon Chu, and Shigeo Morishima. **Memory-Maze: Scenario Driven Visual Language Navigation Benchmark for Guiding Blind People**. RA-L 2025.<br>
 12. **Masaki Kuribayashi**\*, Zhongkai Shangguan\*, Eshed Ohn-Bar. **Time-Aware Assistive Navigation**. ICRA 2026.<br>
-13. Rayna Hata, **Masaki Kuribayashi**, Allan Wang, Hironobu Takagi, Chieko Asakawa. **Robot-Assisted Group Tours for Blind People**. CHI 2026.<br>
-14. Yaxin Hu, **Masaki Kuribayashi**, Allan Wang, Seita Kayukawa, Daisuke Sato, Bilge Mutlu, Hironobu Takagi, Chieko Asakawa. **How Does Delegation in Social Interaction Evolve Over Time? Navigation with a Robot for Blind People**. CHI 2026.<br>
+13. Rayna Hata, **Masaki Kuribayashi**, Allan Wang, Hironobu Takagi, Chieko Asakawa. **How Does Delegation in Social Interaction Evolve Over Time? Navigation with a Robot for Blind People**. CHI 2026.<br>
+14. Yaxin Hu, **Masaki Kuribayashi**, Allan Wang, Seita Kayukawa, Daisuke Sato, Bilge Mutlu, Hironobu Takagi, Chieko Asakawa. **Robot-Assisted Group Tours for Blind People**. CHI 2026.<br>
 
 #### Short Papers
 

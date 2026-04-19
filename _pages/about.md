@@ -46,17 +46,17 @@ HCI Researcher at Woven By Toyota
   </div>
 </div>
 <div class="project-item">
-  <div class="project-item__media"><img src="/data/project/rayna_hata_chi_2026/image.png" alt="Robot-Assisted Group Tours for Blind People" loading="lazy"></div>
+  <div class="project-item__media"><img src="/data/project/rayna_hata_chi_2026/image.png" alt="How Does Delegation in Social Interaction Evolve Over Time? Navigation with a Robot for Blind People" loading="lazy"></div>
   <div class="project-item__body">
-    <div class="project-item__title">Robot-Assisted Group Tours for Blind People</div>
+    <div class="project-item__title">How Does Delegation in Social Interaction Evolve Over Time? Navigation with a Robot for Blind People</div>
     <div class="project-item__venue">CHI 2026 <a href="/data/project/rayna_hata_chi_2026/paper.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a></div>
     <div class="project-item__authors">Rayna Hata, <strong class="project-item__self">Masaki Kuribayashi</strong>, Allan Wang, Hironobu Takagi, Chieko Asakawa</div>
   </div>
 </div>
 <div class="project-item">
-  <div class="project-item__media"><img src="/data/project/yaxin_hu_chi_2026/image.png" alt="How Does Delegation in Social Interaction Evolve Over Time? Navigation with a Robot for Blind People" loading="lazy"></div>
+  <div class="project-item__media"><img src="/data/project/yaxin_hu_chi_2026/image.png" alt="Robot-Assisted Group Tours for Blind People" loading="lazy"></div>
   <div class="project-item__body">
-    <div class="project-item__title">How Does Delegation in Social Interaction Evolve Over Time? Navigation with a Robot for Blind People</div>
+    <div class="project-item__title">Robot-Assisted Group Tours for Blind People</div>
     <div class="project-item__venue">CHI 2026 <a href="/data/project/yaxin_hu_chi_2026/paper.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a></div>
     <div class="project-item__authors">Yaxin Hu, <strong class="project-item__self">Masaki Kuribayashi</strong>, Allan Wang, Seita Kayukawa, Daisuke Sato, Bilge Mutlu, Hironobu Takagi, Chieko Asakawa</div>
   </div>
