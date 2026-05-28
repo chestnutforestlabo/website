@@ -24,6 +24,7 @@ HCI Researcher at Woven By Toyota
 ## Bio
 
 - Apr. 2026 - Current: **HCI Researcher at Woven By Toyota**<br>
+- May. 2026 - Current: **Research Fellow at Waseda University**<br>
 - Apr. 2023 - Mar. 2026: **Ph.D. Student at Waseda University**<br>
 - Apr. 2023 - Mar. 2026: **Research Fellow of the Japan Society for the Promotion of Science (DC1)**<br>
 - Aug. 2024 - Mar. 2026: **Part Time Researcher, Miraikan Accessibility Lab, Miraikan - The National Museum of Emerging Science and Innovation**<br>
@@ -48,7 +49,7 @@ HCI Researcher at Woven By Toyota
 <div class="project-item">
   <div class="project-item__media"><img src="/data/project/rayna_hata_chi_2026/image.png" alt="How Does Delegation in Social Interaction Evolve Over Time? Navigation with a Robot for Blind People" loading="lazy"></div>
   <div class="project-item__body">
-    <div class="project-item__title">How Does Delegation in Social Interaction Evolve Over Time? Navigation with a Robot for Blind People</div>
+    <div class="project-item__title"><a href="https://dl.acm.org/doi/10.1145/3772318.3791439" target="_blank" rel="noopener noreferrer">How Does Delegation in Social Interaction Evolve Over Time? Navigation with a Robot for Blind People</a></div>
     <div class="project-item__venue">CHI 2026 <a href="/data/project/rayna_hata_chi_2026/paper.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a></div>
     <div class="project-item__authors">Rayna Hata, <strong class="project-item__self">Masaki Kuribayashi</strong>, Allan Wang, Hironobu Takagi, Chieko Asakawa</div>
   </div>
@@ -56,7 +57,7 @@ HCI Researcher at Woven By Toyota
 <div class="project-item">
   <div class="project-item__media"><img src="/data/project/yaxin_hu_chi_2026/image.png" alt="Robot-Assisted Group Tours for Blind People" loading="lazy"></div>
   <div class="project-item__body">
-    <div class="project-item__title">Robot-Assisted Group Tours for Blind People</div>
+    <div class="project-item__title"><a href="https://dl.acm.org/doi/10.1145/3772318.3790425" target="_blank" rel="noopener noreferrer">Robot-Assisted Group Tours for Blind People</a></div>
     <div class="project-item__venue">CHI 2026 <a href="/data/project/yaxin_hu_chi_2026/paper.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a></div>
     <div class="project-item__authors">Yaxin Hu, <strong class="project-item__self">Masaki Kuribayashi</strong>, Allan Wang, Seita Kayukawa, Daisuke Sato, Bilge Mutlu, Hironobu Takagi, Chieko Asakawa</div>
   </div>
@@ -191,14 +192,14 @@ HCI Researcher at Woven By Toyota
 1. **2020年度 早稲田大学小野梓記念学術賞(Azusa Ono memorial award 2020)** - Mar. 2021<br>
 2. **WISS最優秀論文賞(WISS best paper award)** - Dec. 2020<br>
 3. **2024年度 早稲田大学小野梓記念学術賞(Azusa Ono memorial award 2024)** - Mar. 2025<br>
-4. **CHI Honorable Mention Award** - May. 2025<br>
 
 ## Academic Service
 
 - Assistants to Local Chairs, Organizing Committee of CHI2025<br>
 - Associate Chair of CHI LBW 2025<br>
-- External Reviewer of ASSETS, CHI, IMWUT, Mobile HCI, ICRA, and HRI<br>
+- External Reviewer of ASSETS, CHI, IMWUT, Mobile HCI, ICRA, UIST, and HRI<br>
 - Miraikan Accessibility Networking Event Organizer<br>
+- WISS2026 Program Committee<br>
 
 ## Fellowships
 
@@ -218,7 +219,8 @@ HCI Researcher at Woven By Toyota
 5. **PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings** (Global Creative Leaders Society, The University of Tokyo) - Mar 2025<br>
 6. **WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People** (CHI 2025 Symposium) - May 2025<br>
 7. **Navigation System for Blind People** (Creative Japan Session at Siggraph ASIA 2025) - Dec 2025<br>
-8. **視覚障害者のMap-less Navigation System実現のための協調インタラクション** (SSII 2026 Organized Session 人が使う画像センシング) - Jun 2026<br>
+8. **Accessibility Research for Blind People in the AI Era: What Is Left to Do?** (Seminar at Nakamura Lab Meiji University) - May 2026<br>
+9. **視覚障害者のMap-less Navigation System実現のための協調インタラクション** (SSII 2026 Organized Session 人が使う画像センシング) - Jun 2026<br>
 
 ## Media
 
