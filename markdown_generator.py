@@ -281,15 +281,41 @@ def resolve_site_href(raw: str) -> str:
     return f"/{normalized}"
 
 
-def render_pdf_icon_link(href: str) -> str:
+def render_icon_link(href: str, icon_path: str, alt: str) -> str:
     link_href = html.escape(href, quote=True)
-    icon_src = html.escape("/images/pdf_icon.png", quote=True)
+    icon_src = html.escape(icon_path, quote=True)
+    alt_text = html.escape(alt, quote=True)
     return (
         f'<a href="{link_href}" target="_blank" rel="noopener noreferrer" '
         f'style="display:inline-flex;vertical-align:middle;margin-left:0.2em;">'
-        f'<img src="{icon_src}" alt="PDF" '
+        f'<img src="{icon_src}" alt="{alt_text}" '
         f'style="height:1em;width:auto;vertical-align:middle;"></a>'
     )
+
+
+def render_pdf_icon_link(href: str) -> str:
+    return render_icon_link(href, "/images/pdf_icon.png", "PDF")
+
+
+def render_slide_icon_link(href: str) -> str:
+    return render_icon_link(href, "/images/slide_icon.png", "Slides")
+
+
+def infer_slide_href(paper_raw: str, repo_root: Path) -> str:
+    value = clean_plain_text(paper_raw)
+    if not value or URL_RE.match(value):
+        return ""
+
+    normalized = value.lstrip("./").lstrip("/")
+    paper_path = repo_root / normalized
+    if paper_path.name.lower() != "paper.pdf":
+        return ""
+
+    slide_path = paper_path.with_name("slide.pdf")
+    if not slide_path.is_file():
+        return ""
+
+    return f"/{slide_path.relative_to(repo_root).as_posix()}"
 
 
 def resolve_doi_url(raw: str) -> str:
@@ -303,7 +329,7 @@ def resolve_doi_url(raw: str) -> str:
     return ""
 
 
-def render_project_item(row: dict[str, str]) -> str:
+def render_project_item(row: dict[str, str], repo_root: Path) -> str:
     title = clean_plain_text(row.get("title", ""))
     authors = strip_equal_contribution_note(row.get("authors", ""))
     venue = clean_plain_text(row.get("venue", ""))
@@ -311,6 +337,7 @@ def render_project_item(row: dict[str, str]) -> str:
     image_path = resolve_project_image_path(row.get("image", ""))
     doi_url = resolve_doi_url(row.get("doi", ""))
     paper_href = resolve_site_href(row.get("paper_url", ""))
+    slide_href = infer_slide_href(row.get("paper_url", ""), repo_root)
 
     title_html = html.escape(title or "Untitled Project")
     authors_html = html.escape(authors)
@@ -327,6 +354,8 @@ def render_project_item(row: dict[str, str]) -> str:
     venue_html = html.escape(venue)
     if paper_href:
         venue_html = f"{venue_html} {render_pdf_icon_link(paper_href)}"
+    if slide_href:
+        venue_html = f"{venue_html} {render_slide_icon_link(slide_href)}"
     award_html = html.escape(award)
     image_html = html.escape(image_path, quote=True)
     alt_html = html.escape(title or "Project image", quote=True)
@@ -459,6 +488,7 @@ def build_section_entries(csv_path: Path, data_dir: Path) -> list[str]:
 
 
 def build_markdown(data_dir: Path, csv_files: list[Path]) -> str:
+    repo_root = data_dir.parent
     lines: list[str] = [
         ABOUT_TOP_BLOCK.rstrip(),
         "",
@@ -516,7 +546,7 @@ def build_markdown(data_dir: Path, csv_files: list[Path]) -> str:
     if project_rows:
         lines.append('<div class="project-list">')
         for row in project_rows:
-            lines.append(render_project_item(row))
+            lines.append(render_project_item(row, repo_root))
         lines.append("</div>")
     else:
         lines.append("_No data available._")
