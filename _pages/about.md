@@ -213,14 +213,13 @@ HCI Researcher at Woven By Toyota
 ## Talks
 
 1. **Introduction to Accessibility Research** (Hong Kong Japanese School) - May 2023<br>
-2. **PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings** (Workshop on Interactive Systems and Software (WISS 2023)) - Nov 2023<br>
-3. **PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings** (Forum on Information Technology (FIT 2024)) - Sep 2024<br>
-4. **Research Introduction; Map-less Navigation System for Blind People** (A11y Meetup, Cybozu (Japan)) - Feb 2025<br>
-5. **PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings** (Global Creative Leaders Society, The University of Tokyo) - Mar 2025<br>
-6. **WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People** (CHI 2025 Symposium) - May 2025<br>
-7. **Navigation System for Blind People** (Creative Japan Session at Siggraph ASIA 2025) - Dec 2025<br>
-8. **Accessibility Research for Blind People in the AI Era: What Is Left to Do?** (Seminar at Nakamura Lab Meiji University) - May 2026<br>
-9. **視覚障害者のMap-less Navigation System実現のための協調インタラクション** (SSII 2026 Organized Session 人が使う画像センシング) - Jun 2026<br>
+2. **PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings** (Forum on Information Technology (FIT 2024)) - Sep 2024<br>
+3. **Research Introduction; Map-less Navigation System for Blind People** (A11y Meetup, Cybozu (Japan)) - Feb 2025<br>
+4. **PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings** (Global Creative Leaders Society, The University of Tokyo) - Mar 2025<br>
+5. [**WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People**](https://sigchi.jp/symposium/chi2025_symposium/) (CHI 2025 Symposium) - May 2025<br>
+6. **Navigation System for Blind People** (Creative Japan Session at Siggraph ASIA 2025) - Dec 2025<br>
+7. [**Accessibility Research for Blind People in the AI Era: What Is Left to Do?**](https://nkmr-lab.org/news/2026-spring-invited-speaker.html) (Seminar at Nakamura Lab Meiji University) - May 2026<br>
+8. [**視覚障害者のMap-less Navigation System実現のための協調インタラクション**](https://pub.confit.atlas.jp/ja/event/ssii2026/content/organized) (SSII 2026 Organized Session 人が使う画像センシング) - Jun 2026<br>
 
 ## Media
 
