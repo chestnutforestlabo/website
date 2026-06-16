@@ -591,7 +591,7 @@ def build_publication_markdown(data_dir: Path, csv_files: list[Path]) -> str:
         full_rows = [row for row in rows if not is_phd_thesis_row(row)]
     if en_short is not None:
         _, rows = read_csv_rows(en_short)
-        short_rows = rows
+        short_rows = sort_rows_oldest_first(rows)
     if jp_csv is not None:
         _, rows = read_csv_rows(jp_csv)
         jp_rows = rows
