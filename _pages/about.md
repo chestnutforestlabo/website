@@ -200,6 +200,7 @@ HCI Researcher at Woven By Toyota
 - External Reviewer of ASSETS, CHI, IMWUT, Mobile HCI, ICRA, UIST, and HRI<br>
 - Miraikan Accessibility Networking Event Organizer<br>
 - WISS2026 Program Committee<br>
+- Associate Chair of UIST Poster 2026<br>
 
 ## Fellowships
 
