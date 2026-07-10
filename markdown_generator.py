@@ -396,11 +396,13 @@ def render_generic_item(
     url = clean_text(row.get("url", "")) or clean_text(row.get("link", ""))
 
     title_display = f"**{title}**" if (bold_title and title) else title
+    if title_display and URL_RE.match(url):
+        title_display = f"[{title_display}]({url})"
 
     if "title" in lower_cols and ("url" in lower_cols or "link" in lower_cols) and len(columns) <= 3:
         if URL_RE.match(url):
             if title:
-                return f"[{title_display}]({url})"
+                return title_display
             return f"[Link]({url})"
         if title and url:
             return f"{title_display} ({url})"

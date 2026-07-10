@@ -39,6 +39,14 @@ HCI Researcher at Woven By Toyota
 
 <div class="project-list">
 <div class="project-item">
+  <div class="project-item__media"><img src="/data/project/yuta_taguchi_uist_2026/image.png" alt="SnowEcho: End-to-End Blind Skiing Assistance System Using Spatial Audio for Simulated Dynamic Slope" loading="lazy"></div>
+  <div class="project-item__body">
+    <div class="project-item__title">SnowEcho: End-to-End Blind Skiing Assistance System Using Spatial Audio for Simulated Dynamic Slope</div>
+    <div class="project-item__venue">UIST 2026</div>
+    <div class="project-item__authors">Yuta Taguchi, Toshihiro Hirano, <strong class="project-item__self">Masaki Kuribayashi</strong>, Yichen Peng, Chen-Chieh Liao, Erwin Wu, Hideki Koike, and Shigeo Morishima</div>
+  </div>
+</div>
+<div class="project-item">
   <div class="project-item__media"><img src="/data/project/masaki_kuribayashi_icra_2026/image.png" alt="Time-Aware Assistive Navigation" loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">Time-Aware Assistive Navigation</div>
@@ -167,14 +175,6 @@ HCI Researcher at Woven By Toyota
     <div class="project-item__title">`Thank God I’m Fly!&#x27;&#x27;: A Gyaru Persona Chatbot for Adopting a Positive Mindset to Prevent and Mitigate Negative Emotions</div>
     <div class="project-item__venue">CHI 2026 Posters <a href="/data/project/ikegami_momoka_chi_2026/paper.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a> <a href="/data/project/ikegami_momoka_chi_2026/slide.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/slide_icon.png" alt="Slides" style="height:1em;width:auto;vertical-align:middle;"></a></div>
     <div class="project-item__authors">Momoka Ikegami, <strong class="project-item__self">Masaki Kuribayashi</strong>, Takuya Kato, Saizo Aoyagi, Tatsunori Hirai</div>
-  </div>
-</div>
-<div class="project-item">
-  <div class="project-item__media"><img src="/data/project/yuta_taguchi_sa_2025/image.png" alt="Spatial Audio for Ski Simulation with Visually Impaired Users in Dynamic Environments" loading="lazy"></div>
-  <div class="project-item__body">
-    <div class="project-item__title"><a href="https://doi.org/10.1145/3757374.3771466" target="_blank" rel="noopener noreferrer">Spatial Audio for Ski Simulation with Visually Impaired Users in Dynamic Environments</a></div>
-    <div class="project-item__venue">SA 2025 Posters <a href="/data/project/yuta_taguchi_sa_2025/paper.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a> <a href="/data/project/yuta_taguchi_sa_2025/slide.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/slide_icon.png" alt="Slides" style="height:1em;width:auto;vertical-align:middle;"></a></div>
-    <div class="project-item__authors">Yuta Taguchi, Toshihiro Hirano, <strong class="project-item__self">Masaki Kuribayashi</strong>, Yichen Peng, Erwin Wu, Hideki Koike, Shigeo Morishima</div>
   </div>
 </div>
 <div class="project-item">
