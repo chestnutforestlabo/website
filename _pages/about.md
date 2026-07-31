@@ -78,6 +78,14 @@ HCI Researcher at Woven By Toyota
   </div>
 </div>
 <div class="project-item">
+  <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="ACME: A Multi-Cultural, Multi-Embodiment Social-Navigation Dataset" loading="lazy"></div>
+  <div class="project-item__body">
+    <div class="project-item__title">ACME: A Multi-Cultural, Multi-Embodiment Social-Navigation Dataset</div>
+    <div class="project-item__venue">arXiv</div>
+    <div class="project-item__authors">Shashank et al</div>
+  </div>
+</div>
+<div class="project-item">
   <div class="project-item__media"><img src="/data/project/toshihiro_hirano_ahs_2025/image.png" alt="SlopeNav: A Realtime Wearable Blind Ski Assistance System with Adaptive Path Planning for Simulated Environments" loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title"><a href="https://doi.org/10.1145/3745900.3746082" target="_blank" rel="noopener noreferrer">SlopeNav: A Realtime Wearable Blind Ski Assistance System with Adaptive Path Planning for Simulated Environments</a></div>

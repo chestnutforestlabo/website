@@ -27,18 +27,19 @@ author_profile: true
 13. **Masaki Kuribayashi**\*, Zhongkai Shangguan\*, Eshed Ohn-Bar. **Time-Aware Assistive Navigation**. ICRA 2026.<br>
 14. Rayna Hata, **Masaki Kuribayashi**, Allan Wang, Hironobu Takagi, Chieko Asakawa. **How Does Delegation in Social Interaction Evolve Over Time? Navigation with a Robot for Blind People**. CHI 2026.<br>
 15. Yaxin Hu, **Masaki Kuribayashi**, Allan Wang, Seita Kayukawa, Daisuke Sato, Bilge Mutlu, Hironobu Takagi, Chieko Asakawa. **Robot-Assisted Group Tours for Blind People**. CHI 2026.<br>
+16. Shashank et al. **ACME: A Multi-Cultural, Multi-Embodiment Social-Navigation Dataset**. arXiv.<br>
 
 #### Short Papers
 
-16. **Masaki Kuribayashi**, Seita Kayukawa, Jayakorn Vongkulbhisal, Daisuke Sato, Chieko Asakawa, Hironobu Takagi, Shigeo Morishima. **Designing a Smartphone-Based Assistance System for Blind People to Recognize Intersections and Obstacles in Indoor Corridors**. Mobiquitous 2021.<br>
-17. Yusuke Miura, **Masaki Kuribayashi**, Erwin Wu, Hideki Koike, Shigeo Morishima. **A Study on Sonification Method of Simulator-Based Ski Training for People with Visual Impairment**. SA 2022 Posters.<br>
-18. **Masaki Kuribayashi**, Hironobu Takagi, Chieko Asakawa, Shigeo Morishima. **Textual and Directional Sign Recognition Algorithm for People with Visual Impairment by Linking Texts and Arrows**. CVPR AVA Workshop 2023.<br>
-19. Hee Jae Kim, Kathakoli Sengupta, **Masaki Kuribayashi**, Hernisa Kacorri, Eshed Ohn-Bar. **A Multi-Modal Dataset for Urban Navigation by Blind Individuals**. ASSETS 2024 Workshop.<br>
-20. **Masaki Kuribayashi**, Kohei Uehara, Allan Wang, Daisuke Sato, Simon Chu, and Shigeo Morishima. **Memory-Maze: Benchmark and Visual Language Navigation Model for Guiding Blind People**. RSS Workshop 2024.<br>
-21. Momoka Ikegami, **Masaki Kuribayashi**, Takuya Kato, Saizo Aoyagi, Tatsunori Hirai. **`Thank God I’m Fly!'': A Gyaru Persona Chatbot for Adopting a Positive Mindset to Prevent and Mitigate Negative Emotions**. CHI 2026 Posters.<br>
-22. Yuta Taguchi, Toshihiro Hirano, **Masaki Kuribayashi**, Yichen Peng, Erwin Wu, Hideki Koike, Shigeo Morishima. **Spatial Audio for Ski Simulation with Visually Impaired Users in Dynamic Environments**. SA 2025 Posters.<br>
-23. Masaya Kubota, **Masaki Kuribayashi**, Renato Ribeiro, and Shigeo Morishima. **Investigating Blind People's Route Perception of Complex Pre-Mapped Routes in Virtual Reality**. UIST 2025 Posters.<br>
-24. **Masaki Kuribayashi**, Kohei Uehara, Allan Wang, Daisuke Sato, Renato Ribeiro, Simon Chu, and Shigeo Morishima. **Memory-Maze: Scenario Driven Benchmark and Visual Language Navigation Model for Guiding Blind People**. ICRA Workshop 2025.<br>
+17. **Masaki Kuribayashi**, Seita Kayukawa, Jayakorn Vongkulbhisal, Daisuke Sato, Chieko Asakawa, Hironobu Takagi, Shigeo Morishima. **Designing a Smartphone-Based Assistance System for Blind People to Recognize Intersections and Obstacles in Indoor Corridors**. Mobiquitous 2021.<br>
+18. Yusuke Miura, **Masaki Kuribayashi**, Erwin Wu, Hideki Koike, Shigeo Morishima. **A Study on Sonification Method of Simulator-Based Ski Training for People with Visual Impairment**. SA 2022 Posters.<br>
+19. **Masaki Kuribayashi**, Hironobu Takagi, Chieko Asakawa, Shigeo Morishima. **Textual and Directional Sign Recognition Algorithm for People with Visual Impairment by Linking Texts and Arrows**. CVPR AVA Workshop 2023.<br>
+20. Hee Jae Kim, Kathakoli Sengupta, **Masaki Kuribayashi**, Hernisa Kacorri, Eshed Ohn-Bar. **A Multi-Modal Dataset for Urban Navigation by Blind Individuals**. ASSETS 2024 Workshop.<br>
+21. **Masaki Kuribayashi**, Kohei Uehara, Allan Wang, Daisuke Sato, Simon Chu, and Shigeo Morishima. **Memory-Maze: Benchmark and Visual Language Navigation Model for Guiding Blind People**. RSS Workshop 2024.<br>
+22. Momoka Ikegami, **Masaki Kuribayashi**, Takuya Kato, Saizo Aoyagi, Tatsunori Hirai. **`Thank God I’m Fly!'': A Gyaru Persona Chatbot for Adopting a Positive Mindset to Prevent and Mitigate Negative Emotions**. CHI 2026 Posters.<br>
+23. Yuta Taguchi, Toshihiro Hirano, **Masaki Kuribayashi**, Yichen Peng, Erwin Wu, Hideki Koike, Shigeo Morishima. **Spatial Audio for Ski Simulation with Visually Impaired Users in Dynamic Environments**. SA 2025 Posters.<br>
+24. Masaya Kubota, **Masaki Kuribayashi**, Renato Ribeiro, and Shigeo Morishima. **Investigating Blind People's Route Perception of Complex Pre-Mapped Routes in Virtual Reality**. UIST 2025 Posters.<br>
+25. **Masaki Kuribayashi**, Kohei Uehara, Allan Wang, Daisuke Sato, Renato Ribeiro, Simon Chu, and Shigeo Morishima. **Memory-Maze: Scenario Driven Benchmark and Visual Language Navigation Model for Guiding Blind People**. ICRA Workshop 2025.<br>
 
 ### Japanese Publications
 
