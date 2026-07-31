@@ -535,7 +535,7 @@ def build_markdown(data_dir: Path, csv_files: list[Path]) -> str:
     project_rows: list[dict[str, str]] = []
     if en_main is not None:
         _, rows = read_csv_rows(en_main)
-        project_rows.extend(sort_rows_newest_first(rows))
+        project_rows.extend(reversed(rows))
     if en_short is not None:
         _, rows = read_csv_rows(en_short)
         short_rows = [row for row in sort_rows_newest_first(rows) if is_truthy(row.get("include", ""))]
