@@ -38,14 +38,6 @@ HCI Researcher at Woven By Toyota
 
 <div class="project-list">
 <div class="project-item">
-  <div class="project-item__media"><img src="/data/project/yuta_taguchi_uist_2026/image.png" alt="SnowEcho: End-to-End Blind Skiing Assistance System Using Spatial Audio for Simulated Dynamic Slope" loading="lazy"></div>
-  <div class="project-item__body">
-    <div class="project-item__title">SnowEcho: End-to-End Blind Skiing Assistance System Using Spatial Audio for Simulated Dynamic Slope</div>
-    <div class="project-item__venue">UIST 2026</div>
-    <div class="project-item__authors">Yuta Taguchi, Toshihiro Hirano, <strong class="project-item__self">Masaki Kuribayashi</strong>, Yichen Peng, Chen-Chieh Liao, Erwin Wu, Hideki Koike, and Shigeo Morishima</div>
-  </div>
-</div>
-<div class="project-item">
   <div class="project-item__media"><img src="/data/project/masaki_kuribayashi_icra_2026/image.png" alt="Time-Aware Assistive Navigation" loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">Time-Aware Assistive Navigation</div>
@@ -75,6 +67,14 @@ HCI Researcher at Woven By Toyota
     <div class="project-item__title">Map-less Navigation for Blind People</div>
     <div class="project-item__venue">PhD Thesis <a href="/data/project/masaki_kuribayashi_phd_thesis_2026/paper.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a></div>
     <div class="project-item__authors"><strong class="project-item__self">Masaki Kuribayashi</strong></div>
+  </div>
+</div>
+<div class="project-item">
+  <div class="project-item__media"><img src="/data/project/yuta_taguchi_uist_2026/image.png" alt="SnowEcho: End-to-End Blind Skiing Assistance System Using Spatial Audio for Simulated Dynamic Slope" loading="lazy"></div>
+  <div class="project-item__body">
+    <div class="project-item__title">SnowEcho: End-to-End Blind Skiing Assistance System Using Spatial Audio for Simulated Dynamic Slope</div>
+    <div class="project-item__venue">UIST 2026</div>
+    <div class="project-item__authors">Yuta Taguchi, Toshihiro Hirano, <strong class="project-item__self">Masaki Kuribayashi</strong>, Yichen Peng, Chen-Chieh Liao, Erwin Wu, Hideki Koike, and Shigeo Morishima</div>
   </div>
 </div>
 <div class="project-item">
