@@ -216,6 +216,7 @@ HCI Researcher at Woven By Toyota
 - Miraikan Accessibility Networking Event Organizer<br>
 - WISS2026 Program Committee<br>
 - Associate Chair of UIST Poster 2026<br>
+- Associate Chair of CHI 2027<br>
 
 ## Fellowships
 
