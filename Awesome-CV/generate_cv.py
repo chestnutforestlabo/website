@@ -584,7 +584,8 @@ def main() -> None:
     bio_rows = read_csv_rows(args.data_dir / "bio.csv")
     awards_rows = read_csv_rows(args.data_dir / "awards.csv")
     fellowships_rows = read_csv_rows(args.data_dir / "fellowships.csv")
-    service_rows = read_csv_rows(args.data_dir / "academic_service.csv")
+    reviewing_rows = read_csv_rows(args.data_dir / "academic_service_reviewing.csv")
+    pc_rows = read_csv_rows(args.data_dir / "academic_service_pc.csv")
     talks_rows = read_csv_rows(args.data_dir / "talks.csv")
     articles_rows = read_csv_rows(args.data_dir / "articles.csv")
     publications_rows = read_csv_rows(args.data_dir / "en" / "publications.csv")
@@ -617,7 +618,10 @@ def main() -> None:
         honor_from_title_date(row.get("title", ""), row.get("date", ""))
         for row in sort_by_date_desc(fellowships_rows)
     ]
-    services = [service_to_honor(row) for row in sort_by_date_desc(service_rows, key="service")]
+    reviewing_services = [
+        service_to_honor(row) for row in sort_by_date_desc(reviewing_rows, key="service")
+    ]
+    pc_services = [service_to_honor(row) for row in sort_by_date_desc(pc_rows, key="service")]
 
     section_names: list[str] = []
     if education_entries:
@@ -644,10 +648,13 @@ def main() -> None:
             render_honors_section("Honors & Funding", [("Awards", awards), ("Fellowships", fellowships)]),
         )
         section_names.append("honors")
-    if services:
+    if reviewing_services or pc_services:
         write_text(
             args.sections_dir / "service.tex",
-            render_honors_section("Academic Service", [("Service", services)]),
+            render_honors_section(
+                "Academic Service",
+                [("Reviewing", reviewing_services), ("Committee Member", pc_services)],
+            ),
         )
         section_names.append("service")
 

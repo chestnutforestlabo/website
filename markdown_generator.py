@@ -215,6 +215,14 @@ def is_publications_csv(csv_path: Path, data_dir: Path) -> bool:
     return "publications" in rel
 
 
+def is_academic_service_csv(csv_path: Path, data_dir: Path) -> bool:
+    rel = csv_path.relative_to(data_dir).as_posix()
+    return rel in {
+        "academic_service_reviewing.csv",
+        "academic_service_pc.csv",
+    }
+
+
 def get_csv_by_relative_path(data_dir: Path, csv_files: list[Path], relative_path: str) -> Path | None:
     target = relative_path.replace("\\", "/")
     for csv_path in csv_files:
@@ -472,19 +480,26 @@ def build_section_entries(csv_path: Path, data_dir: Path) -> list[str]:
     rel = csv_path.relative_to(data_dir).as_posix()
     date_last = rel in {
         "awards.csv",
-        "academic_service.csv",
+        "academic_service_reviewing.csv",
+        "academic_service_pc.csv",
         "talks.csv",
         "fellowships.csv",
         "articles.csv",
     }
-    bold_title = rel in {"awards.csv", "academic_service.csv", "talks.csv", "fellowships.csv"}
+    bold_title = rel in {
+        "awards.csv",
+        "academic_service_reviewing.csv",
+        "academic_service_pc.csv",
+        "talks.csv",
+        "fellowships.csv",
+    }
     entries = [
         render_generic_item(columns, row, date_last=date_last, bold_title=bold_title)
         for row in rows
     ]
-    if rel == "academic_service.csv":
+    if is_academic_service_csv(csv_path, data_dir):
         return [f"- {entry}" for entry in entries]
-    if rel in {"awards.csv", "academic_service.csv", "articles.csv", "fellowships.csv", "talks.csv"}:
+    if rel in {"awards.csv", "articles.csv", "fellowships.csv", "talks.csv"}:
         return [f"{i}. {entry}" for i, entry in enumerate(entries, start=1)]
     return entries
 
@@ -555,9 +570,38 @@ def build_markdown(data_dir: Path, csv_files: list[Path]) -> str:
     lines.append("")
 
     # 2) Remaining sections in requested order
+    awards_path = "awards.csv"
+    csv_path = get_csv_by_relative_path(data_dir, csv_files, awards_path)
+    if csv_path is not None:
+        lines.append("## Awards")
+        lines.append("")
+        entries = build_section_entries(csv_path, data_dir)
+        for entry in entries:
+            lines.append(f"{entry}<br>")
+        lines.append("")
+
+    service_sections = [
+        ("academic_service_reviewing.csv", "Reviewing"),
+        ("academic_service_pc.csv", "Committee Member"),
+    ]
+    available_service_sections = [
+        (get_csv_by_relative_path(data_dir, csv_files, rel_path), title)
+        for rel_path, title in service_sections
+    ]
+    if any(csv_path is not None for csv_path, _ in available_service_sections):
+        lines.append("## Academic Service")
+        lines.append("")
+        for csv_path, title in available_service_sections:
+            if csv_path is None:
+                continue
+            lines.append(f"### {title}")
+            lines.append("")
+            entries = build_section_entries(csv_path, data_dir)
+            for entry in entries:
+                lines.append(f"{entry}<br>")
+            lines.append("")
+
     ordered_sections = [
-        ("awards.csv", "Awards"),
-        ("academic_service.csv", "Academic Service"),
         ("fellowships.csv", "Fellowships"),
         ("talks.csv", "Talks"),
         ("articles.csv", "Media"),

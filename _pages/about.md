@@ -15,9 +15,9 @@ HCI Researcher at Woven By Toyota
 
 ## News
 
-- Aug. 2026: **Will Serve as CHI 2027 AC.**<br>
+- Aug. 2026: **Will Serve as CHI 2027 Associate Chair.**<br>
 - Aug. 2026: **One paper is accepted to ASSETS 2026 Poster!**<br>
-- July. 2026: **Will Serve as UIST Poster 2027 AC.**<br>
+- July. 2026: **Will Serve as UIST 2027 Poster Associate Chair.**<br>
 - July. 2026: **One paper is accepted to UIST 2026!**<br>
 - Apr. 2026: **Joined Woven By Toyota as an HCI Researcher!**<br>
 
@@ -211,13 +211,18 @@ HCI Researcher at Woven By Toyota
 
 ## Academic Service
 
-- Assistants to Local Chairs, Organizing Committee of CHI2025<br>
-- Associate Chair of CHI LBW 2025<br>
-- External Reviewer of ASSETS, CHI, IMWUT, Mobile HCI, ICRA, UIST, and HRI<br>
-- Miraikan Accessibility Networking Event Organizer<br>
-- WISS2026 Program Committee<br>
-- Associate Chair of UIST Poster 2026<br>
+### Reviewing
+
 - Associate Chair of CHI 2027<br>
+- Associate Chair of UIST 2026 Poster<br>
+- Associate Chair of CHI 2025 LBW<br>
+- External Reviewer of ASSETS, CHI, IMWUT, Mobile HCI, ICRA, UIST, and HRI<br>
+
+### Committee Member
+
+- WISS2026 Program Committee<br>
+- Assistants to Local Chairs, Organizing Committee of CHI 2025<br>
+- Miraikan Accessibility Networking Event Organizer<br>
 
 ## Fellowships
 
