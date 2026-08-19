@@ -15,10 +15,11 @@ HCI Researcher at Woven By Toyota
 
 ## News
 
-- July. 2026: **One paper is accepted to UIST2026!**<br>
-- Apr. 2026: **I joined Woven By Toyota as an HCI Researcher!**<br>
-- Feb. 2026: **One poster paper is accepted to CHI2026!**<br>
-- Feb. 2026: **One paper is accepted to ICRA2026!**<br>
+- Aug. 2026: **Will Serve as CHI 2027 AC.**<br>
+- Aug. 2026: **One paper is accepted to ASSETS 2026 Poster!**<br>
+- July. 2026: **Will Serve as UIST Poster 2027 AC.**<br>
+- July. 2026: **One paper is accepted to UIST 2026!**<br>
+- Apr. 2026: **Joined Woven By Toyota as an HCI Researcher!**<br>
 
 ## Bio
 
