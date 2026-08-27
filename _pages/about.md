@@ -15,6 +15,7 @@ HCI Researcher at Woven By Toyota
 
 ## News
 
+- Aug. 2026: **One paper is accepted to VRST 2026!**<br>
 - Aug. 2026: **Will Serve as CHI 2027 Associate Chair.**<br>
 - Aug. 2026: **One paper is accepted to ASSETS 2026 Poster!**<br>
 - July. 2026: **Will Serve as UIST 2027 Poster Associate Chair.**<br>
@@ -38,6 +39,14 @@ HCI Researcher at Woven By Toyota
 *\* indicates equal contribution.*
 
 <div class="project-list">
+<div class="project-item">
+  <div class="project-item__media"><img src="/data/project/masaya_kubota_vrst_2026/image.png" alt="Virtual Exploration for Blind People to Perceive Geometric and Spatial Features" loading="lazy"></div>
+  <div class="project-item__body">
+    <div class="project-item__title">Virtual Exploration for Blind People to Perceive Geometric and Spatial Features</div>
+    <div class="project-item__venue">VRST 2026</div>
+    <div class="project-item__authors">Masaya Kubota, <strong class="project-item__self">Masaki Kuribayashi*</strong>, Renato Ribeiro*, and Shigeo Morishima</div>
+  </div>
+</div>
 <div class="project-item">
   <div class="project-item__media"><img src="/images/comingsoon.jpg" alt="ACME: A Multi-Cultural, Multi-Embodiment Social-Navigation Dataset" loading="lazy"></div>
   <div class="project-item__body">
@@ -191,14 +200,6 @@ HCI Researcher at Woven By Toyota
     <div class="project-item__title">`Thank God I’m Fly!&#x27;&#x27;: A Gyaru Persona Chatbot for Adopting a Positive Mindset to Prevent and Mitigate Negative Emotions</div>
     <div class="project-item__venue">CHI 2026 Posters <a href="/data/project/ikegami_momoka_chi_2026/paper.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a> <a href="/data/project/ikegami_momoka_chi_2026/slide.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/slide_icon.png" alt="Slides" style="height:1em;width:auto;vertical-align:middle;"></a></div>
     <div class="project-item__authors">Momoka Ikegami, <strong class="project-item__self">Masaki Kuribayashi</strong>, Takuya Kato, Saizo Aoyagi, Tatsunori Hirai</div>
-  </div>
-</div>
-<div class="project-item">
-  <div class="project-item__media"><img src="/data/project/masaya_kubota_uist_2025/image.png" alt="Investigating Blind People&#x27;s Route Perception of Complex Pre-Mapped Routes in Virtual Reality" loading="lazy"></div>
-  <div class="project-item__body">
-    <div class="project-item__title"><a href="https://doi.org/10.1145/3746058.3758403" target="_blank" rel="noopener noreferrer">Investigating Blind People&#x27;s Route Perception of Complex Pre-Mapped Routes in Virtual Reality</a></div>
-    <div class="project-item__venue">UIST 2025 Posters <a href="/data/project/masaya_kubota_uist_2025/paper.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a> <a href="/data/project/masaya_kubota_uist_2025/slide.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/slide_icon.png" alt="Slides" style="height:1em;width:auto;vertical-align:middle;"></a></div>
-    <div class="project-item__authors">Masaya Kubota, <strong class="project-item__self">Masaki Kuribayashi</strong>, Renato Ribeiro, and Shigeo Morishima</div>
   </div>
 </div>
 </div>
