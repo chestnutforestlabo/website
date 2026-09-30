@@ -230,8 +230,9 @@ HCI Researcher at Woven By Toyota
 
 ### Committee Member
 
-- WISS2026 Program Committee<br>
-- Assistants to Local Chairs, Organizing Committee of CHI 2025<br>
+- ASSETS 2027 Local Chairs<br>
+- WISS 2026 Program Committee<br>
+- CHI 2025 Assistants to Local Chairs<br>
 - Miraikan Accessibility Networking Event Organizer<br>
 
 ## Fellowships
