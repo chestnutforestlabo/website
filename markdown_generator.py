@@ -274,7 +274,7 @@ def resolve_project_image_path(raw: str) -> str:
         return value
 
     normalized = value.lstrip("./")
-    if normalized.startswith("images/"):
+    if normalized.startswith(("data/", "images/")):
         return f"/{normalized}"
     return f"/images/{normalized}"
 
