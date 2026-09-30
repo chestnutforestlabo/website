@@ -21,7 +21,7 @@ redirect_from:
   - /about.html
 ---
 
-HCI Researcher at Woven By Toyota
+HCI Researcher at Woven by Toyota
 
 **Interest**: Human Computer Interaction (HCI), Accessibility, Human-Centered AI
 """

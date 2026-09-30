@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-HCI Researcher at Woven By Toyota
+HCI Researcher at Woven by Toyota
 
 **Interest**: Human Computer Interaction (HCI), Accessibility, Human-Centered AI
 
@@ -21,16 +21,16 @@ HCI Researcher at Woven By Toyota
 - Aug. 2026: **One paper was accepted to ASSETS 2026 Poster!**<br>
 - July. 2026: **Served as UIST 2027 Poster Associate Chair.**<br>
 - July. 2026: **One paper was accepted to UIST 2026!**<br>
-- Apr. 2026: **Joined Woven By Toyota as an HCI Researcher!**<br>
+- Apr. 2026: **Joined Woven by Toyota as an HCI Researcher!**<br>
 
 ## Bio
 
-- Apr. 2026 - Current: **HCI Researcher at Woven By Toyota**<br>
+- Apr. 2026 - Current: **HCI Researcher at Woven by Toyota**<br>
 - May. 2026 - Current: **Research Fellow at Waseda University**<br>
 - Apr. 2023 - Mar. 2026: **Ph.D. Student at Waseda University**<br>
 - Apr. 2023 - Mar. 2026: **Research Fellow of the Japan Society for the Promotion of Science (DC1)**<br>
 - Aug. 2024 - Mar. 2026: **Part Time Researcher, Miraikan Accessibility Lab, Miraikan - The National Museum of Emerging Science and Innovation**<br>
-- Aug. 2025 - Oct. 2025: **Intern, Woven By Toyota**<br>
+- Aug. 2025 - Oct. 2025: **Intern, Woven by Toyota**<br>
 - Jan. 2024 - May. 2025: **Visiting Researcher, H2X lab, Boston University, Advisor: Eshed Ohn-Bar**<br>
 - Apr. 2021 - Jan. 2024: **Research Intern, IBM Research - Tokyo, Advisor: Hironobu Takagi, Chieko Asakawa, Tatsuya Ishihara**<br>
 - Jun. 2022 - Sept. 2022: **Visiting Researcher, Cognitive Assistance Lab, Carnegie Mellon University, Advisor: Daisuke Sato, Chieko Asakawa**<br>
@@ -234,6 +234,7 @@ HCI Researcher at Woven By Toyota
 - WISS 2026 Program Committee<br>
 - CHI 2025 Assistants to Local Chairs<br>
 - Miraikan Accessibility Networking Event Organizer<br>
+- WISS 2025 Student Volunteer<br>
 
 ## Fellowships
 
