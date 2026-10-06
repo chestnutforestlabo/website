@@ -191,7 +191,7 @@ HCI Researcher at Woven by Toyota
   <div class="project-item__media"><img src="/data/project/shoya_higuchi_vrst_poster_2026/image.png" alt="Gestures for Blind People to Specify Spatial Focus of Vision Language Models on Head-Worn Devices" loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title">Gestures for Blind People to Specify Spatial Focus of Vision Language Models on Head-Worn Devices</div>
-    <div class="project-item__venue">VRST 2026 Posters</div>
+    <div class="project-item__venue">VRST 2026 Posters <a href="/data/project/shoya_higuchi_vrst_poster_2026/paper.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a></div>
     <div class="project-item__authors">Shoya Higuchi, <strong class="project-item__self">Masaki Kuribayashi</strong>, Arata Ito, Shigeo Morishima</div>
   </div>
 </div>
