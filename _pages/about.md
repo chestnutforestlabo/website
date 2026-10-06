@@ -52,7 +52,7 @@ HCI Researcher at Woven by Toyota
   <div class="project-item__media"><img src="/data/project/shashank_arxiv_2026/image.png" alt="ACME: A Multi-Cultural, Multi-Embodiment Social-Navigation Dataset" loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title"><a href="https://raoshashank.github.io/acme-socnav-dataset/" target="_blank" rel="noopener noreferrer">ACME: A Multi-Cultural, Multi-Embodiment Social-Navigation Dataset</a></div>
-    <div class="project-item__venue">arXiv</div>
+    <div class="project-item__venue">arXiv <a href="/data/project/shashank_arxiv_2026/paper.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a></div>
     <div class="project-item__authors">Shashank et al</div>
   </div>
 </div>
