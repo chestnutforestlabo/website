@@ -15,7 +15,7 @@ HCI Researcher at Woven by Toyota
 
 ## News
 
-- Sept. 2026: **Will serve as ASSETS 2027 local chair.**<br>
+- Sept. 2026: **Will serve as ASSETS 2027 Local Chair.**<br>
 - Aug. 2026: **One paper and one poster were accepted to VRST 2026!**<br>
 - Aug. 2026: **Serving as CHI 2027 Associate Chair.**<br>
 - Aug. 2026: **One paper was accepted to ASSETS 2026 Poster!**<br>
