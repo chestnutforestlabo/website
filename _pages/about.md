@@ -206,7 +206,7 @@ HCI Researcher at Woven by Toyota
 <div class="project-item">
   <div class="project-item__media"><img src="/data/project/ikegami_momoka_chi_2026/image.png" alt="`Thank God I’m Fly!&#x27;&#x27;: A Gyaru Persona Chatbot for Adopting a Positive Mindset to Prevent and Mitigate Negative Emotions" loading="lazy"></div>
   <div class="project-item__body">
-    <div class="project-item__title">`Thank God I’m Fly!&#x27;&#x27;: A Gyaru Persona Chatbot for Adopting a Positive Mindset to Prevent and Mitigate Negative Emotions</div>
+    <div class="project-item__title"><a href="https://dl.acm.org/doi/10.1145/3772363.3798615" target="_blank" rel="noopener noreferrer">`Thank God I’m Fly!&#x27;&#x27;: A Gyaru Persona Chatbot for Adopting a Positive Mindset to Prevent and Mitigate Negative Emotions</a></div>
     <div class="project-item__venue">CHI 2026 Posters <a href="/data/project/ikegami_momoka_chi_2026/paper.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a> <a href="/data/project/ikegami_momoka_chi_2026/slide.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/slide_icon.png" alt="Slides" style="height:1em;width:auto;vertical-align:middle;"></a></div>
     <div class="project-item__authors">Momoka Ikegami, <strong class="project-item__self">Masaki Kuribayashi</strong>, Takuya Kato, Saizo Aoyagi, Tatsunori Hirai</div>
   </div>
