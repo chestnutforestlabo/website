@@ -218,6 +218,7 @@ HCI Researcher at Woven by Toyota
 1. **2020年度 早稲田大学小野梓記念学術賞(Azusa Ono memorial award 2020)** - Mar. 2021<br>
 2. **WISS最優秀論文賞(WISS best paper award)** - Dec. 2020<br>
 3. **2024年度 早稲田大学小野梓記念学術賞(Azusa Ono memorial award 2024)** - Mar. 2025<br>
+4. **ASSETS’2026 Audience Choice Poster Award (Co-authored poster paper)** - Oct. 2026<br>
 
 ## Academic Service
 
