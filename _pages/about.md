@@ -68,7 +68,7 @@ HCI Researcher at Woven by Toyota
   <div class="project-item__media"><img src="/data/project/masaki_kuribayashi_phd_thesis_2026/image.png" alt="Map-less Navigation for Blind People" loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title"><a href="https://waseda.repo.nii.ac.jp/records/2008365" target="_blank" rel="noopener noreferrer">Map-less Navigation for Blind People</a></div>
-    <div class="project-item__venue">PhD Thesis <a href="/data/project/masaki_kuribayashi_phd_thesis_2026/paper.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a></div>
+    <div class="project-item__venue">PhD Thesis <a href="/data/project/masaki_kuribayashi_phd_thesis_2026/paper.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a> <a href="/data/project/masaki_kuribayashi_phd_thesis_2026/slide.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/slide_icon.png" alt="Slides" style="height:1em;width:auto;vertical-align:middle;"></a></div>
     <div class="project-item__authors"><strong class="project-item__self">Masaki Kuribayashi</strong></div>
   </div>
 </div>
