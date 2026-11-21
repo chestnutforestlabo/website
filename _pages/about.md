@@ -44,7 +44,7 @@ HCI Researcher at Woven by Toyota
   <div class="project-item__media"><img src="/data/project/masaya_kubota_vrst_2026/image.png" alt="Virtual Exploration for Blind People to Perceive Geometric and Spatial Features" loading="lazy"></div>
   <div class="project-item__body">
     <div class="project-item__title"><a href="https://dl.acm.org/doi/10.1145/3822517.3848690" target="_blank" rel="noopener noreferrer">Virtual Exploration for Blind People to Perceive Geometric and Spatial Features</a></div>
-    <div class="project-item__venue">VRST 2026 <a href="/data/project/masaya_kubota_vrst_2026/paper.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a></div>
+    <div class="project-item__venue">VRST 2026 <a href="/data/project/masaya_kubota_vrst_2026/paper.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/pdf_icon.png" alt="PDF" style="height:1em;width:auto;vertical-align:middle;"></a> <a href="/data/project/masaya_kubota_vrst_2026/slide.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;vertical-align:middle;margin-left:0.2em;"><img src="/images/slide_icon.png" alt="Slides" style="height:1em;width:auto;vertical-align:middle;"></a></div>
     <div class="project-item__authors">Masaya Kubota, <strong class="project-item__self">Masaki Kuribayashi*</strong>, Renato Ribeiro*, and Shigeo Morishima</div>
   </div>
 </div>
